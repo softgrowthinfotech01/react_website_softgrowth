@@ -1,4 +1,4 @@
-import Herosec from "./Herosec";
+
 
 export default function About() {
   return (
@@ -117,7 +117,7 @@ export default function About() {
           <div className="col-md-6">
             <div className="img-container">
               <img
-                src="assets/img/who-we-are.png"
+                src="assets/who-we-are.png"
                 alt="who-we-are"
                 className="img-fluid px-5 "
                 srcSet=""

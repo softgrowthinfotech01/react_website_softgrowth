@@ -2,7 +2,7 @@ export default function Contact() {
   return (
     <section id="hero">
       <div className="hero-container">
-        {/*<a href="index.php" class="hero-logo" data-aos="zoom-in"><img src="assets/img/soft_logo_org.svg" alt="soft_logo" style="width:200px;"></a>*/}
+        {/*<a href="index.php" class="hero-logo" data-aos="zoom-in"><img src="assets/soft_logo_org.svg" alt="soft_logo" style="width:200px;"></a>*/}
         <h1 className="text-white fw-bold">
           Welcome To <span className="orangeborder"> Softgrowth </span> Infotech
         </h1>

@@ -45,7 +45,7 @@ export default function Portfolio() {
               <div className="col-lg-4 col-md-6 portfolio-item filter-dynamic">
                 <div className="portfolio-wrap">
                   <img
-                    src="assets/img/portfolio/bhumi_logo.png"
+                    src="assets/portfolio/bhumi_logo.png"
                     className="img-fluid"
                     alt=""
                   />
@@ -54,7 +54,7 @@ export default function Portfolio() {
                     <p>Web</p>
                     <div className="portfolio-links">
                       <a
-                        href="assets/img/portfolio/bhumi_logo.png"
+                        href="assets/portfolio/bhumi_logo.png"
                         data-gallery="portfolioGallery"
                         className="portfolio-lightbox"
                         title="App 1"
@@ -75,7 +75,7 @@ export default function Portfolio() {
               <div className="col-lg-4 col-md-6 portfolio-item filter-web">
                 <div className="portfolio-wrap">
                   <img
-                    src="assets/img/portfolio/wildlife_adventure.png"
+                    src="assets/portfolio/wildlife_adventure.png"
                     className="img-fluid"
                     alt=""
                   />
@@ -84,7 +84,7 @@ export default function Portfolio() {
                     <p>Web</p>
                     <div className="portfolio-links">
                       <a
-                        href="assets/img/portfolio/wildlife_adventure.png"
+                        href="assets/portfolio/wildlife_adventure.png"
                         data-gallery="portfolioGallery"
                         className="portfolio-lightbox"
                         title="Web 3"
@@ -105,7 +105,7 @@ export default function Portfolio() {
               <div className="col-lg-4 col-md-6 portfolio-item filter-dynamic">
                 <div className="portfolio-wrap">
                   <img
-                    src="assets/img/portfolio/elysian.png"
+                    src="assets/portfolio/elysian.png"
                     className="img-fluid"
                     alt=""
                   />
@@ -114,7 +114,7 @@ export default function Portfolio() {
                     <p>web</p>
                     <div className="portfolio-links">
                       <a
-                        href="assets/img/portfolio/elysian.png"
+                        href="assets/portfolio/elysian.png"
                         data-gallery="portfolioGallery"
                         className="portfolio-lightbox"
                         title="App 2"
@@ -135,7 +135,7 @@ export default function Portfolio() {
               <div className="col-lg-4 col-md-6 portfolio-item filter-static">
                 <div className="portfolio-wrap">
                   <img
-                    src="assets/img/portfolio/easycracker.png"
+                    src="assets/portfolio/easycracker.png"
                     className="img-fluid"
                     alt=""
                   />
@@ -144,7 +144,7 @@ export default function Portfolio() {
                     <p>Web</p>
                     <div className="portfolio-links">
                       <a
-                        href="assets/img/portfolio/easycracker.png"
+                        href="assets/portfolio/easycracker.png"
                         data-gallery="portfolioGallery"
                         className="portfolio-lightbox"
                         title="Card 2"
@@ -165,7 +165,7 @@ export default function Portfolio() {
               <div className="col-lg-4 col-md-6 portfolio-item filter-web">
                 <div className="portfolio-wrap">
                   <img
-                    src="assets/img/portfolio/tadoba_wildlife.png"
+                    src="assets/portfolio/tadoba_wildlife.png"
                     className="img-fluid"
                     alt=""
                   />
@@ -174,7 +174,7 @@ export default function Portfolio() {
                     <p>web</p>
                     <div className="portfolio-links">
                       <a
-                        href="assets/img/portfolio/tadoba_wildlife.png"
+                        href="assets/portfolio/tadoba_wildlife.png"
                         data-gallery="portfolioGallery"
                         className="portfolio-lightbox"
                         title="Web 2"
@@ -195,7 +195,7 @@ export default function Portfolio() {
               <div className="col-lg-4 col-md-6 portfolio-item filter-dynamic">
                 <div className="portfolio-wrap">
                   <img
-                    src="assets/img/portfolio/atma.png"
+                    src="assets/portfolio/atma.png"
                     className="img-fluid"
                     alt=""
                   />
@@ -204,7 +204,7 @@ export default function Portfolio() {
                     <p>Web</p>
                     <div className="portfolio-links">
                       <a
-                        href="assets/img/portfolio/atma.png"
+                        href="assets/portfolio/atma.png"
                         data-gallery="portfolioGallery"
                         className="portfolio-lightbox"
                         title="App 3"
@@ -225,7 +225,7 @@ export default function Portfolio() {
               <div className="col-lg-4 col-md-6 portfolio-item filter-static">
                 <div className="portfolio-wrap">
                   <img
-                    src="assets/img/portfolio/ctvnews.png"
+                    src="assets/portfolio/ctvnews.png"
                     className="img-fluid"
                     alt=""
                   />
@@ -234,7 +234,7 @@ export default function Portfolio() {
                     <p>web</p>
                     <div className="portfolio-links">
                       <a
-                        href="assets/img/portfolio/ctvnews.png"
+                        href="assets/portfolio/ctvnews.png"
                         data-gallery="portfolioGallery"
                         className="portfolio-lightbox"
                         title="Card 1"
@@ -255,7 +255,7 @@ export default function Portfolio() {
               <div className="col-lg-4 col-md-6 portfolio-item filter-static">
                 <div className="portfolio-wrap">
                   <img
-                    src="assets/img/portfolio/akojwar.png"
+                    src="assets/portfolio/akojwar.png"
                     className="img-fluid"
                     alt=""
                   />
@@ -264,7 +264,7 @@ export default function Portfolio() {
                     <p>web</p>
                     <div className="portfolio-links">
                       <a
-                        href="assets/img/portfolio/akojwar.png"
+                        href="assets/portfolio/akojwar.png"
                         data-gallery="portfolioGallery"
                         className="portfolio-lightbox"
                         title="Card 3"
@@ -285,7 +285,7 @@ export default function Portfolio() {
               <div className="col-lg-4 col-md-6 portfolio-item filter-web">
                 <div className="portfolio-wrap">
                   <img
-                    src="assets/img/portfolio/pahel.png"
+                    src="assets/portfolio/pahel.png"
                     className="img-fluid"
                     alt=""
                   />
@@ -294,7 +294,7 @@ export default function Portfolio() {
                     <p>Web</p>
                     <div className="portfolio-links">
                       <a
-                        href="assets/img/portfolio/pahel.png"
+                        href="assets/portfolio/pahel.png"
                         data-gallery="portfolioGallery"
                         className="portfolio-lightbox"
                         title="Web 3"
@@ -315,7 +315,7 @@ export default function Portfolio() {
               <div className="col-lg-4 col-md-6 portfolio-item filter-web">
                 <div className="portfolio-wrap">
                   <img
-                    src="assets/img/portfolio/chandrapur_police.png"
+                    src="assets/portfolio/chandrapur_police.png"
                     className="img-fluid"
                     alt=""
                   />
@@ -324,7 +324,7 @@ export default function Portfolio() {
                     <p>Web</p>
                     <div className="portfolio-links">
                       <a
-                        href="assets/img/portfolio/chandrapur_police.png"
+                        href="assets/portfolio/chandrapur_police.png"
                         data-gallery="portfolioGallery"
                         className="portfolio-lightbox"
                         title="Web 3"
@@ -345,7 +345,7 @@ export default function Portfolio() {
               <div className="col-lg-4 col-md-6 portfolio-item filter-web">
                 <div className="portfolio-wrap">
                   <img
-                    src="assets/img/portfolio/shashwat.png"
+                    src="assets/portfolio/shashwat.png"
                     className="img-fluid"
                     alt=""
                   />
@@ -354,7 +354,7 @@ export default function Portfolio() {
                     <p>Web</p>
                     <div className="portfolio-links">
                       <a
-                        href="assets/img/portfolio/shashwat.png"
+                        href="assets/portfolio/shashwat.png"
                         data-gallery="portfolioGallery"
                         className="portfolio-lightbox"
                         title="Web 3"
@@ -375,7 +375,7 @@ export default function Portfolio() {
               <div className="col-lg-4 col-md-6 portfolio-item filter-web">
                 <div className="portfolio-wrap">
                   <img
-                    src="assets/img/portfolio/ashuda.png"
+                    src="assets/portfolio/ashuda.png"
                     className="img-fluid"
                     alt=""
                   />
@@ -384,7 +384,7 @@ export default function Portfolio() {
                     <p>Web</p>
                     <div className="portfolio-links">
                       <a
-                        href="assets/img/portfolio/ashuda.png"
+                        href="assets/portfolio/ashuda.png"
                         data-gallery="portfolioGallery"
                         className="portfolio-lightbox"
                         title="Web 3"
