@@ -1,4 +1,4 @@
-import "./Navbar.css";
+
 import logo from "../assets/img/soft_logo_org.png";
 import line from "../assets/img/lineSeparatorWhite.png";
 
