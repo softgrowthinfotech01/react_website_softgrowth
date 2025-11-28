@@ -15,7 +15,8 @@ export default function Navbar() {
         <nav id="navbar" className="navbar">
           <ul>
             <li>
-              <Link className="nav-link scrollto" to="/#wellcome">
+              <Link to="/#header" className="active nav-link scrollto"
+              >
                 Home
               </Link>
             </li>
