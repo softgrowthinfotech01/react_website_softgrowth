@@ -11,7 +11,7 @@ export default function About() {
           <h2 className="text-bold;">About Us</h2>
           <ol>
             <li>
-              <a href="index.php">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>About Us</li>
           </ol>
@@ -117,7 +117,7 @@ export default function About() {
           <div className="col-md-6">
             <div className="img-container">
               <img
-                src="assets/who-we-are.png"
+                src="src/assets/who-we-are.jpg"
                 alt="who-we-are"
                 className="img-fluid px-5 "
                 srcSet=""

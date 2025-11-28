@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../../index.css";
 const faqData = [
   {
     id: "faq1",
@@ -64,7 +64,7 @@ const FrequentlySection = () => {
               </a>
 
               {/* ❌ removed data-bs-parent to prevent auto-scroll */}
-              <div id={item.id} className="collapse">
+              <div id={item.id} className="collapse" data-bs-parent=".faq-list">
                 <p>{item.answer}</p>
               </div>
             </li>

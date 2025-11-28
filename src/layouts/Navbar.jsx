@@ -39,12 +39,6 @@ export default function Navbar() {
             </li>
 
             <li>
-              <Link className="nav-link scrollto" to="/contact">
-                Contact
-              </Link>
-            </li>
-
-            <li>
               <Link className="nav-link scrollto" to="/placements">
                 Placements
               </Link>

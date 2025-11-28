@@ -12,7 +12,7 @@ export default function Contact() {
         <a
           data-aos="fade-up"
           data-aos-delay={200}
-          href="#wellcome"
+          href="#header"
           className="btn-get-started scrollto"
         >
           Get Started
