@@ -7,6 +7,7 @@ import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import Placements from "./pages/placements";
+import MyForm from "./pages/MyForm";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/placements" element={<Placements />} />
+          <Route path="/save" element={<MyForm />} />
         </Route>
       </Routes>
     </BrowserRouter>

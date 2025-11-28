@@ -13,8 +13,8 @@ export default function MainLayout() {
 
   useEffect(() => {
     AOS.init({
-      duration: 800,  // animation duration
-      once: true,     // animation should happen only once
+      duration: 1000,  // animation duration
+      once: false,     // animation should happen only once
     });
   }, []);
 
