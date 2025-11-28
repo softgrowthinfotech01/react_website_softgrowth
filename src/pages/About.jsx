@@ -117,7 +117,7 @@ export default function About() {
           <div className="col-md-6">
             <div className="img-container">
               <img
-                src="assets/who-we-are.png"
+                src="/src/assets/who-we-are.webp"
                 alt="who-we-are"
                 className="img-fluid px-5 "
                 srcSet=""
