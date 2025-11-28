@@ -9,7 +9,7 @@ export default function Services() {
           <h2>Services</h2>
           <ol>
             <li>
-              <a href="index.php">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>Services</li>
           </ol>
@@ -32,7 +32,7 @@ export default function Services() {
         <div className="row">
           <div className="col-md-6 m-auto text-center" data-aos="fade-left">
             <img
-              src="assets/services/1lQn7Wpv.png"
+              src="src/assets/services/1lQn7Wpv.png"
               className="img-fluid"
               alt="image"
             />
@@ -70,14 +70,14 @@ export default function Services() {
           </div>
           <div className="col-md-6 m-auto text-center" data-aos="fade-right">
             <img
-              src="assets/services/TFjB_5GL.png"
+              src="src/assets/services/TFjB_5GL.png"
               className=" img-fluid"
               alt="image"
             />
           </div>
           <div className="col-md-6 m-auto text-center" data-aos="fade-left">
             <img
-              src="assets/services/KGldtclE.png"
+              src="src/assets/services/KGldtclE.png"
               className="img-fluid"
               alt="image"
             />
@@ -105,7 +105,7 @@ export default function Services() {
           </div>
           <div className="col-md-6 m-auto text-center" data-aos="fade-right">
             <img
-              src="assets/services/soft_training.png"
+              src="src/assets/services/soft_training.png"
               className="img-fluid"
               alt="image"
             />
