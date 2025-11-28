@@ -383,7 +383,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("./assets/hero-bg.png");
+  background: url("./assets/hero-bg.webp");
   position: relative;
 
 }
@@ -1629,7 +1629,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: url("assets/footer-bg.jpg") center center no-repeat;
+  background: url("src/assets/footer-bg.webp") center center no-repeat;
   color: #fff;
   font-size: 14px;
   position: relative;

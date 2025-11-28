@@ -1,5 +1,5 @@
-import logo from "../assets/soft_logo_org.png";
-import line from "../assets/lineSeparatorWhite.png";
+import logo from "../assets/soft_logo_org.webp";
+import line from "../assets/lineSeparatorWhite.webp";
 
 export default function Navbar() {
   return (
@@ -11,7 +11,7 @@ export default function Navbar() {
               <a href="#header" className="scrollto footer-logo">
                 <img src={logo} alt="img" style={{ width: 150 }} />
               </a>
-              <h3>Softgrowth Infotech</h3>
+              <h3>Softgrowth Infotech</h3>  
             </div>
           </div>
         </div>
