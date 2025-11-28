@@ -1,5 +1,5 @@
 
-import logo from "../assets/soft_logo_org.png";
+import logo from "../assets/soft_logo_org.webp";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
