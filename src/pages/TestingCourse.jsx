@@ -20,7 +20,7 @@ const TestingCourse = () => {
               </div>
 
               <h1 className="display-6 fw-semibold lh-1 mb-3">
-                Become a <span className="bg-white text-dark px-2 rounded">Software Test Automation Engineer</span> with Java & Selenium
+                Become a <span className="bg-warning text-dark px-2 rounded">Software Test Automation Engineer</span> with Java & Selenium
               </h1>
 
               <p className="fs-5 text-white-50 mb-4 col-lg-10">
@@ -78,7 +78,7 @@ const TestingCourse = () => {
               <div className="card border-0 shadow-lg rounded-4 text-dark">
                 <div className="card-body p-4">
 
-                  <h5 className="fw-bold mb-1">Enquire for Syllabus, Fees & Next Batch</h5>
+                  <h5 className="fw-bold mb-1 text-warning">Enquire for Syllabus, Fees & Next Batch</h5>
                   <p className="text-muted small mb-3">
                     Fill the form to get a call back with detailed syllabus PDF, fee structure, and batch timings.
                   </p>
@@ -125,7 +125,7 @@ const TestingCourse = () => {
                       <textarea className="form-control bg-light" rows="2" placeholder="Any specific query?" />
                     </div>
 
-                    <button type="button" className="btn btn-primary w-100 fw-bold py-2">
+                    <button type="button" className="btn btn-warning w-100 fw-bold py-2">
                       Get Call Back
                     </button>
 
@@ -148,7 +148,7 @@ const TestingCourse = () => {
           <div className="row g-5 align-items-center">
 
             <div className="col-lg-7">
-              <div className="badge rounded-pill bg-light text-dark border px-3 py-2 mb-3">
+              <div className="badge rounded-pill bg-warning text-dark border px-3 py-2 mb-3">
                 <i className="fa-solid fa-bug-slash text-danger me-2"></i>
                 Industry-Oriented Automation Testing Training
               </div>
@@ -328,7 +328,7 @@ const TestingCourse = () => {
       <section className="py-5 bg-primary bg-opacity-10" id="career">
         <div className="container py-4">
           <h2 className="fw-bold text-center mb-2">Placement & Career Support</h2>
-          <p className="text-muted text-center mb-5 mx-auto" style={{ maxWidth: "600px" }}>
+          <p className="text-white text-center mb-5 mx-auto" style={{ maxWidth: "600px" }}>
             Softgrowth Infotech supports you till you crack interviews and start your testing career.
           </p>
 
@@ -361,7 +361,7 @@ const TestingCourse = () => {
       {/* ================= FAQ ================= */}
       <section className="py-5 mb-5 bg-white">
         <div className="container py-4">
-          <h2 className="fw-bold text-center mb-2">Frequently Asked Questions</h2>
+          <h2 className="fw-bold text-center mb-2 text-dark">Frequently Asked Questions</h2>
           <p className="text-muted text-center mb-5 mx-auto" style={{ maxWidth: "600px" }}>
             Clear your doubts about the Software Testing Automation course.
           </p>
@@ -402,7 +402,7 @@ const TestingCourse = () => {
               </div>
 
               <div className="text-center mt-5">
-                <a href="#enquiry" className="btn btn-primary btn-lg fw-bold px-5">
+                <a href="#enquiry" className="btn btn-warning btn-lg fw-bold px-5">
                   Still have questions? Enquire Now
                 </a>
               </div>
