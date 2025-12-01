@@ -42,25 +42,7 @@ export default function Navbar() {
                 As a top best web design company in Chandrapur we provide all
                 facilities related to the digitalization of your business.
               </p>
-              <h2
-                className="text-uppercase"
-                data-scroll-reveal="enter left move 10px over 1s after 0.2s"
-              >
-                Our Placements
-              </h2>
-              <img
-                src={line}
-                className="img-responsive lineSeparator py-4"
-                data-scroll-reveal="enter left move 10px over 1s after 0.3s"
-                alt="separator"
-              />
-              <a
-                data-scroll-reveal="enter left move 10px over 1s after 0.3s"
-                href="placements"
-                style={{ color: "white" }}
-              >
-                - Placements
-              </a>
+             
             </div>
             <div className="col-md-4">
               <h2
@@ -108,12 +90,13 @@ export default function Navbar() {
               <div className="row h6">
                 <div className="col-md-6 ">
                   <ul className="infoContact list-unstyled text-light">
+                    <i className="bx bx-current-location" />
                     <li>
                       {/* <i class="fa fa-location-arrow"></i> */}
-                      <i className="bx bx-current-location" />
+                      
                       Global Tower, Kosara Road, Datala
                     </li>
-                    <li>Kosara,Chandrapur. Maharashtra 442402</li>
+                    <li>Kosara,Chandrapur. Maharashtra - 442402</li>
                   </ul>
                   <ul className="infoContact list-unstyled">
                     <li>
@@ -145,7 +128,7 @@ export default function Navbar() {
           </div>
         </div>
         <div className="container footer-bottom clearfix pt-0">
-          <div className="social-links text-center p-3">
+          <div className="social-links  text-center p-3 ">
             <a href="https://x.com/SoftgrowthIndia" className="twitter">
               <i className="bx bxl-twitter" />
             </a>
