@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PortolioSections = () => {
   const portfolioItems = [
@@ -88,11 +89,11 @@ const PortolioSections = () => {
         {/* Explore More Button */}
         <div className="service_button d-flex justify-content-center">
           <div>
-            <a href="portfolio">
+            <Link to="/portfolio">
               <button className="about_button text-light text-decoration-underline underline-color-orange">
                 Explore More
               </button>
-            </a>
+            </Link>
           </div>
         </div>
 

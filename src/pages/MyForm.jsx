@@ -17,7 +17,7 @@ export default function MyForm() {
     formData.append("description", form.description);
     formData.append("image", form.image);
 
-    const res = await fetch("http://localhost/softgrowth/backend/api/save.php", {
+    const res = await fetch("http://localhost/react_website_softgrowth/backend/api/save.php", {
       method: "POST",
       body: formData
     });
