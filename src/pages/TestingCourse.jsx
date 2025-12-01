@@ -279,7 +279,7 @@ const TestingCourse = () => {
                 </div>
               </div>
               <div className="d-flex gap-2">
-                <a href="#enquiry" className="btn btn-primary fw-semibold">Send Me Syllabus</a>
+                <a href="#enquiry" className="btn btn-warning fw-semibold">Send Me Syllabus</a>
                 <a href="tel:+918888654507" className="btn btn-outline-light">
                   <i className="fa-solid fa-phone me-2"></i> Call Now
                 </a>

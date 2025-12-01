@@ -297,18 +297,9 @@ export default function Home() {
        <FrequentlySection/>
         {/* ======= Contact Section ======= */}
       </main>
-      {/* End #main */}
-      {/* ======= Footer ======= */}
-      {/*?php require_once "footer.php"; ?*/}
-      {/* End Footer */}
-      <a
-        href="#header"
-        className="back-to-top d-flex align-items-center justify-content-center"
-      >
-        <i className="bi bi-arrow-up-short" />
-      </a>
-      {/* Vendor JS Files */}
-      {/* Template Main JS File */}
+     
+ 
+     
     </>
   );
 }
