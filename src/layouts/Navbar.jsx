@@ -1,4 +1,3 @@
-
 import logo from "../assets/soft_logo_org.webp";
 import { Link } from "react-router-dom";
 
@@ -15,15 +14,8 @@ export default function Navbar() {
         <nav id="navbar" className="navbar">
           <ul>
             <li>
-              <Link to="/#header" className="active nav-link scrollto"
-              >
+              <Link to="/#header" className="active nav-link scrollto">
                 Home
-              </Link>
-            </li>
-
-            <li>
-              <Link className="nav-link scrollto" to="/about">
-                About
               </Link>
             </li>
 
@@ -40,25 +32,38 @@ export default function Navbar() {
             </li>
 
             <li>
-              <Link className="nav-link scrollto" to="/placements">
-                Placements
+              <Link className="nav-link scrollto" to="/about">
+                About
               </Link>
             </li>
+
+            <li>
+              <Link className="nav-link scrollto" to="/career">
+                Career
+              </Link>
+            </li>
+
             <li className="dropdown">
               <Link to="#">
-                <span>Courses</span> <i className="bi bi-chevron-down"></i>
+                <span>Traning Programs</span> <i className="bi bi-chevron-down"></i>
               </Link>
 
               <ul>
                 <li>
-                  <Link to="/frontend" className="">
+                  <Link to="/frontend_course" className="">
                     Front-End Development
                   </Link>
                 </li>
 
                 <li>
-                  <Link to="/testing" className="">
+                  <Link to="/software_testing" className="">
                     Software Testing
+                  </Link>
+                </li>
+
+                <li>
+                  <Link className="nav-link scrollto" to="/placements">
+                    Placements
                   </Link>
                 </li>
               </ul>

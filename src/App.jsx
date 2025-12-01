@@ -8,6 +8,8 @@ import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import Placements from "./pages/placements";
 import MyForm from "./pages/MyForm";
+import FrontendCourse from "./pages/FrontendCourse";
+import TestingCourse from "./pages/TestingCourse";
 
 function App() {
   return (
@@ -21,6 +23,9 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/placements" element={<Placements />} />
+          <Route path="/frontend_course" element={<FrontendCourse />} />
+          <Route path="/software_testing" element={<TestingCourse />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/save" element={<MyForm />} />
         </Route>
       </Routes>
