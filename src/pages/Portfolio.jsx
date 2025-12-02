@@ -144,19 +144,7 @@ export default function Portfolio() {
     <>
       <main id="main">
         {/* Breadcrumbs */}
-        <section className="breadcrumbs">
-          <div className="container">
-            <div className="d-flex justify-content-between align-items-center">
-              <h2 className="text-uppercase">Portfolio</h2>
-              <ol>
-                <li>
-                  <a href="index">Home</a>
-                </li>
-                <li>Portfolio</li>
-              </ol>
-            </div>
-          </div>
-        </section>
+
 
         {/* Portfolio Section */}
         <section className="inner-page">

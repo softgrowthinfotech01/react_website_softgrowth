@@ -4,21 +4,6 @@ const Careers = () => {
   return (
     <>
       <main id="main">
-        {/* ======= Breadcrumbs ======= */}
-        <section className="breadcrumbs">
-          <div className="container">
-            <div className="d-flex justify-content-between align-items-center">
-              <h2 className="text-bold">careers</h2>
-              <ol>
-                <li>
-                  <a href="/">Home</a>
-                </li>
-                <li>careers</li>
-              </ol>
-            </div>
-          </div>
-        </section>
-
         {/* Inner Page */}
         <section className="inner-page">
           <div className="container">
@@ -35,8 +20,6 @@ const Careers = () => {
                 className="row bg-light text-dark p-5 justify-content-center"
                 data-aos="fade-up"
               >
-                
-
                 {/* Career Form */}
                 <div className="container">
                   <div className="career-form">

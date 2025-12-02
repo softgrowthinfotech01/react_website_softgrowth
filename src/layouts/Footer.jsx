@@ -11,7 +11,7 @@ export default function Navbar() {
               <a href="#header" className="scrollto footer-logo">
                 <img src={logo} alt="img" style={{ width: 150 }} />
               </a>
-              <h3>Softgrowth Infotech</h3>  
+              <h3>Softgrowth Infotech</h3>
             </div>
           </div>
         </div>
@@ -42,7 +42,6 @@ export default function Navbar() {
                 As a top best web design company in Chandrapur we provide all
                 facilities related to the digitalization of your business.
               </p>
-             
             </div>
             <div className="col-md-4">
               <h2
@@ -93,16 +92,13 @@ export default function Navbar() {
                     <i className="bx bx-current-location" />
                     <li>
                       {/* <i class="fa fa-location-arrow"></i> */}
-                      
-                      Global Tower, Kosara Road, Datala
+                      Global Tower, Kosara Road, Datala, Kosara,Chandrapur.
+                      Maharashtra - 442402
                     </li>
-                    <li>Kosara,Chandrapur. Maharashtra - 442402</li>
                   </ul>
                   <ul className="infoContact list-unstyled">
                     <li>
-                      {" "}
-                      <i className="bx bx-phone-call" />
-                      +91-8888654507
+                      <i className="bx bx-phone-call" /> +91-8888654507
                     </li>
                   </ul>
                 </div>
@@ -117,10 +113,9 @@ export default function Navbar() {
                   <ul className="infoContact list-unstyled">
                     <li>
                       {/* <i class="bx bx-clock"></i> */}
-                      <i className="bx bx-time-five" />
-                      Monday - Saturday
+                      <i className="bx bx-time-five" /> Monday - Saturday
                     </li>
-                    <li>9.30 AM - 7.30 PM </li>
+                    <li>9.30 AM - 7.30 PM</li>
                   </ul>
                 </div>
               </div>

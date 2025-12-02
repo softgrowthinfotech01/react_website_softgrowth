@@ -5,19 +5,7 @@ export default function About() {
    <>
   <main id="main">
     {/* ======= Breadcrumbs ======= */}
-    <section className="breadcrumbs">
-      <div className="container">
-        <div className="d-flex justify-content-between align-items-center">
-          <h2 className="text-bold;">About Us</h2>
-          <ol>
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>About Us</li>
-          </ol>
-        </div>
-      </div>
-    </section>
+    
     {/* End Breadcrumbs */}
     <section className="inner-page text-center">
       <div className="container">

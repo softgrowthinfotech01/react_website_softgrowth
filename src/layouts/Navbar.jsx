@@ -44,8 +44,8 @@ export default function Navbar() {
             </li>
 
             <li className="dropdown">
-              <Link to="#">
-                <span>Traning Programs</span> <i className="bi bi-chevron-down"></i>
+              <Link>
+               Traning Programs <i className="bi bi-chevron-down"></i>
               </Link>
 
               <ul>
@@ -87,8 +87,7 @@ export default function Navbar() {
               </a>
             </li>
           </ul>
-        </nav>{" "}
-        {/* <!-- .navbar --> */}
+        </nav>
       </div>
     </header>
   );

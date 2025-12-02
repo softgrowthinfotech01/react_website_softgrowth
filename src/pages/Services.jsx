@@ -3,29 +3,17 @@ export default function Services() {
     <>
       <main id="main">
         {/* ======= Breadcrumbs ======= */}
-        <section className="breadcrumbs">
-          <div className="container">
-            <div className="d-flex justify-content-between align-items-center">
-              <h2>Services</h2>
-              <ol>
-                <li>
-                  <a href="/">Home</a>
-                </li>
-                <li>Services</li>
-              </ol>
-            </div>
-          </div>
-        </section>
+        
         {/* End Breadcrumbs */}
         <section className="inner-page">
           <div className="container">
-            <div className="row justify-content-center mb-5">
+            <div className="row justify-content-center">
               <div className="col-lg-12" data-aos="fade-up">
                 <div className="section-title" data-aos="fade-up">
                   <h2 className="orangeborder">Services</h2>
                   <p>
                     We always try to provide best services. Get more insight to
-                    it.{" "}
+                    it.
                   </p>
                 </div>
               </div>
