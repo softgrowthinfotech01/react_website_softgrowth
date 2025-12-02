@@ -1,8 +1,15 @@
+import React, { lazy, Suspense } from "react";
 import AboutSection from "../components/home/AboutSection";
-import ClientSections from "../components/home/ClientSections";
-import EnvirnmentSections from "../components/home/EnvirnmentSections";
 import FrequentlySection from "../components/home/FrequentlySection";
-import PortolioSections from "../components/home/PortolioSections";
+
+const ClientSections = lazy(() => import("../components/home/ClientSections"));
+const EnvirnmentSections = lazy(() =>
+  import("../components/home/EnvirnmentSections")
+);
+
+const PortolioSections = lazy(() =>
+  import("../components/home/PortolioSections")
+);
 
 export default function Home() {
   return (
@@ -67,10 +74,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* End wellcome Us Section */}
-        {/* ======= About Us Section ======= */}
-       <AboutSection/>
-        {/* End About Us Section */}
+
+        {/* About Section */}
+        <AboutSection />
+
         {/* ======= Services Section ======= */}
         <section id="services" className="services">
           <div className="container">
@@ -83,7 +90,6 @@ export default function Home() {
             <div className="row">
               <div className="col-lg-6 order-2 order-lg-1">
                 <div className="icon-box mt-5 mt-lg-0" data-aos="fade-up">
-                  {/* <i class="bx bx-receipt"></i> */}
                   <i className="bx bx-code-block main-text-orange" />
                   <h4>Website Design &amp; Development</h4>
                   <p>Make your online presence shine!</p>
@@ -121,12 +127,12 @@ export default function Home() {
                     </li>
                   </ul>
                 </div>
+
                 <div
                   className="icon-box mt-5"
                   data-aos="fade-up"
                   data-aos-delay={100}
                 >
-                  {/* <i class="bx bx-cube-alt"></i> */}
                   <i className="bx bx-book-content main-text-orange" />
                   <h4>Professional Courses for Students</h4>
                   <p>Unlock your potential with hands-on learning.</p>
@@ -165,12 +171,12 @@ export default function Home() {
                     </li>
                   </ul>
                 </div>
+
                 <div
                   className="icon-box mt-5"
                   data-aos="fade-up"
                   data-aos-delay={300}
                 >
-                  {/* <i class="bx bx-shield"></i> */}
                   <i className="bx bx-desktop main-text-orange" />
                   <h4>Custom Software Development</h4>
                   <p>Solutions as unique as your business.</p>
@@ -201,6 +207,7 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
+
               <div
                 className="image col-lg-6 order-1 order-lg-2 img-fluid rounded "
                 style={{
@@ -212,13 +219,12 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* End Services Section */}
-        {/* ======= Featured Section ======= */}
+
+        {/* Featured Section */}
         <section id="featured " className="featured text-dark">
           <div className="container">
             <div className="row">
               <div className="col-lg-6 parallax" data-aos="fade-right">
-                {/* <div class="parallax"></div> */}
                 <div className="tab-content">
                   <div
                     className="tab-pane active show "
@@ -235,6 +241,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+
               <div
                 className="col-lg-6 mt-4 mt-lg-0 text-dark"
                 data-aos="fade-left"
@@ -281,25 +288,15 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* End Featured Section */}
-        {/* ======= Why Us Section ======= */}
-        {/* ======= Portfolio Section ======= */}
-        <PortolioSections />
-        {/* End Portfolio Section */}
-   
-        <EnvirnmentSections />
-        {/* End Testimonials Section */}
 
-        {/* ======= Clients Section ======= */}
-        <ClientSections />
-
-        {/* ======= Frequently Asked Questions Section ======= */}
-       <FrequentlySection/>
-        {/* ======= Contact Section ======= */}
+        {/* ===== Lazy Loaded Sections ===== */}
+        <Suspense fallback={<div>Loading...</div>}>
+          <PortolioSections />
+          <EnvirnmentSections />
+          <ClientSections />
+        </Suspense>
+        <FrequentlySection />
       </main>
-     
- 
-     
     </>
   );
 }
