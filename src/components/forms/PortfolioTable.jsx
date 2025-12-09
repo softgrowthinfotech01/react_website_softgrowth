@@ -15,7 +15,7 @@ const PortfolioTable = () => {
   return (
     <div>
       <h2>Placement Data</h2>
-      <table border="1" cellPadding="10">
+      <table className="table" border="1" cellPadding="10">
         <thead>
           <tr>
             {/* Change headings depending on your JSON structure */}
@@ -39,6 +39,16 @@ const PortfolioTable = () => {
             </tr>
           ))}
         </tbody>
+        <tfoot>
+             <tr>
+            {/* Change headings depending on your JSON structure */}
+            <th>Sr. No.</th>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>image</th>
+          </tr>
+        </tfoot>
       </table>
     </div>
   );
