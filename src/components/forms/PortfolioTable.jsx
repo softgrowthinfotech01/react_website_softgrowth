@@ -24,6 +24,7 @@ const PortfolioTable = () => {
             <th>Title</th>
             <th>Description</th>
             <th>image</th>
+            <th>Action</th>
           </tr>
         </thead>
 
@@ -36,6 +37,30 @@ const PortfolioTable = () => {
               <td>{item.title}</td>
               <td>{item.description}</td>
               <td><img src={`http://localhost/react_website_softgrowth/backend/uploads/${item.image}`} alt="image" width={200}/></td>
+              <td>
+                <button
+  onClick={async () => {
+    const res = await fetch(
+      `http://localhost/react_website_softgrowth/backend/api/port_delete.php?id=${item.id}`,
+      { method: "GET" }
+    );
+
+    const data = await res.json();
+
+    if (data.status) {
+      alert("Record deleted successfully!");
+
+      // Update table instantly
+      setData(data.data);
+    } else {
+      alert("Error deleting record!");
+    }
+  }}
+>
+  Delete
+</button>
+
+              </td>
             </tr>
           ))}
         </tbody>
@@ -47,6 +72,7 @@ const PortfolioTable = () => {
             <th>Title</th>
             <th>Description</th>
             <th>image</th>
+            <th>Action</th>
           </tr>
         </tfoot>
       </table>

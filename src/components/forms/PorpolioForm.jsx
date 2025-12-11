@@ -89,12 +89,7 @@ const PorpolioForm = () => {
           </button>
         </form>
       </div>
-      <div className="container">
-        <h2 className="text-2xl mb-4">Portfolio Entries</h2>
-        <div className="row">
-          {/* Portfolio entries will be displayed here */}
-        </div>  
-      </div>
+     
     </div>
   );
 };

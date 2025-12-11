@@ -1,3 +1,11 @@
+// import images
+import React from "react";
+
+import servicesImage1 from "../assets/services/1lQn7Wpv.webp";
+import servicesImage2 from "../assets/services/TFjB_5GL.webp";
+import servicesImage3 from "../assets/services/KGldtclE.webp";
+import servicesImage4 from "../assets/services/soft_training.webp";
+
 export default function Services() {
   return (
     <>
@@ -21,7 +29,7 @@ export default function Services() {
             <div className="row">
               <div className="col-md-6 m-auto text-center" data-aos="fade-left">
                 <img
-                  src="/src/assets/services/1lQn7Wpv.webp"
+                  src={servicesImage1}
                   className="img-fluid"
                   alt="image"
                 />
@@ -64,14 +72,14 @@ export default function Services() {
                 data-aos="fade-right"
               >
                 <img
-                  src="/src/assets/services/TFjB_5GL.webp"
+                  src={servicesImage2}
                   className=" img-fluid"
                   alt="image"
                 />
               </div>
               <div className="col-md-6 m-auto text-center" data-aos="fade-left">
                 <img
-                  src="/src/assets/services/KGldtclE.webp"
+                  src={servicesImage3}
                   className="img-fluid"
                   alt="image"
                 />
@@ -104,7 +112,7 @@ export default function Services() {
                 data-aos="fade-right"
               >
                 <img
-                  src="/src/assets/services/soft_training.webp"
+                  src={servicesImage4}
                   className="img-fluid"
                   alt="image"
                 />

@@ -1,4 +1,6 @@
-
+// import images/
+import React from "react";
+import aboutImage from "../assets/who-we-are.webp"; 
 
 export default function About() {
   return (
@@ -105,7 +107,7 @@ export default function About() {
           <div className="col-md-6">
             <div className="img-container">
               <img
-                src="/src/assets/who-we-are.webp"
+                src={aboutImage}
                 alt="who-we-are"
                 className="img-fluid px-5 "
                 srcSet=""

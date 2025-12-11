@@ -1,24 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// import images  
+import bhumiLogo from "../../assets/portfolio/bhumi_logo.webp";
+import wildlifeAdventure from "../../assets/portfolio/wildlife_adventure.webp";
+import elysian from "../../assets/portfolio/elysian.webp";
+
 const PortolioSections = () => {
   const portfolioItems = [
     {
-      img: "/src/assets/portfolio/bhumi_logo.webp",
+      img: bhumiLogo,
       title: "Bhumi",
       type: "Web",
       filter: "filter-dynamic",
       link: "https://softgrowthinfotech.com/new/home.php",
     },
     {
-      img: "/src/assets/portfolio/wildlife_adventure.webp",
+      img: wildlifeAdventure,
       title: "Tadoba Wildlife Adventure",
       type: "Web",
       filter: "filter-web",
       link: "http://www.tadobawildlifeadventure.com/",
     },
     {
-      img: "/src/assets/portfolio/elysian.webp",
+      img: elysian,
       title: "Elysian",
       type: "Web",
       filter: "filter-dynamic",

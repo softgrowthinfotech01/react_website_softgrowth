@@ -1,4 +1,14 @@
 import React from "react";
+// import images  
+import classroom1 from "../../assets/gallary/classroom1.webp";
+import classroom2 from "../../assets/gallary/classroom2.webp";
+import classroom3 from "../../assets/gallary/classroom3.webp";
+import classroom4 from "../../assets/gallary/classroom4.webp";
+import classroom5 from "../../assets/gallary/classroom5.webp";
+import classroom6 from "../../assets/gallary/classroom6.webp";
+import classroom7 from "../../assets/gallary/classroom7.webp";
+import classroom8 from "../../assets/gallary/classroom8.webp";
+import classroom9 from "../../assets/gallary/classroom9.webp";
 
 const EnvirnmentSections = () => {
   return (
@@ -19,7 +29,7 @@ const EnvirnmentSections = () => {
               data-src="src/assets/company/bhumi_logo.png"
             >
               <img
-                src="src/assets/gallary/classroom1.webp"
+                src={classroom1}
                 className="w-100 h-100 img-fluid shadow-1-strong mb-3"
                 alt="Boat on Calm Water"
               />
@@ -32,7 +42,7 @@ const EnvirnmentSections = () => {
               data-src="assets/portfolio/bhumi_logo.png"
             >
               <img
-                src="src/assets/gallary/classroom2.webp"
+                src={classroom2}
                 className="w-100 h-100 shadow-1-strong "
                 alt="Wintry Mountain Landscape"
               />
@@ -45,7 +55,7 @@ const EnvirnmentSections = () => {
               data-src="assets/portfolio/atma.png"
             >
               <img
-                src="src/assets/gallary/classroom3.webp"
+                src={classroom3}
                 className="w-100 h-100 shadow-1-strong mb-3"
                 alt="Mountains in the Clouds"
               />
@@ -58,7 +68,7 @@ const EnvirnmentSections = () => {
               data-src="assets/portfolio/bhumi_logo.png"
             >
               <img
-                src="src/assets/gallary/classroom4.webp"
+                src={classroom4}
                 className=" w-100 h-100 shadow-1-strong"
                 alt="Boat on Calm Water"
               />
@@ -71,7 +81,7 @@ const EnvirnmentSections = () => {
               data-src="assets/portfolio/bhumi_logo.png"
             >
               <img
-                src="src/assets/gallary/classroom5.webp"
+                src={classroom5}
                 className=" w-100 h-100 shadow-1-strong"
                 alt="Boat on Calm Water"
               />
@@ -84,7 +94,7 @@ const EnvirnmentSections = () => {
               data-src="assets/portfolio/bhumi_logo.png"
             >
               <img
-                src="src/assets/gallary/classroom6.webp"
+                src={classroom6}
                 className=" w-100 h-100 shadow-1-strong"
                 alt="Boat on Calm Water"
               />
@@ -97,7 +107,7 @@ const EnvirnmentSections = () => {
               data-src="assets/portfolio/bhumi_logo.png"
             >
               <img
-                src="src/assets/gallary/classroom7.webp"
+                src={classroom7}
                 className=" w-100 h-100 shadow-1-strong"
                 alt="Boat on Calm Water"
               />
@@ -110,7 +120,7 @@ const EnvirnmentSections = () => {
               data-src="assets/portfolio/bhumi_logo.png"
             >
               <img
-                src="src/assets/gallary/classroom8.webp"
+                src={classroom8}
                 className=" w-100 h-100 shadow-1-strong"
                 alt="Boat on Calm Water"
               />
@@ -123,7 +133,7 @@ const EnvirnmentSections = () => {
               data-src="assets/portfolio/bhumi_logo.png"
             >
               <img
-                src="src/assets/gallary/classroom9.webp"
+                src={classroom9}
                 className=" w-100 h-100 shadow-1-strong"
                 alt="Boat on Calm Water"
               />

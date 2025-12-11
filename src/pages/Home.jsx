@@ -1,6 +1,10 @@
 import React, { lazy, Suspense } from "react";
 import AboutSection from "../components/home/AboutSection";
 import FrequentlySection from "../components/home/FrequentlySection";
+// import images
+import landingImage from "../assets/landing-image1.webp";
+import servicesImage from "../assets/services-image.webp";
+import featuredImage from "../assets/featured-1.webp";
 
 const ClientSections = lazy(() => import("../components/home/ClientSections"));
 const EnvirnmentSections = lazy(() =>
@@ -25,7 +29,7 @@ export default function Home() {
               >
                 <div className="image-container px-5">
                   <img
-                    src="src/assets/landing-image1.webp"
+                    src={landingImage}
                     className="img-fluid rounded "
                     alt="landing-image"
                   />
@@ -211,7 +215,7 @@ export default function Home() {
               <div
                 className="image col-lg-6 order-1 order-lg-2 img-fluid rounded "
                 style={{
-                  backgroundImage: 'url("src/assets/services-image.webp")',
+                  backgroundImage: `url(${servicesImage})`,
                 }}
                 data-aos="fade-left"
                 data-aos-delay={100}
@@ -233,9 +237,9 @@ export default function Home() {
                   >
                     <figure>
                       <img
-                        src="src/assets/featured-1.webp"
+                        src={featuredImage}
                         alt=""
-                        class="w-50"
+                        className="w-50"
                       />
                     </figure>
                   </div>

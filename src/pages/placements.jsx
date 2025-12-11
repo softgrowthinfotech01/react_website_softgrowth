@@ -1,53 +1,71 @@
 import React from "react";
+// import images
+import trupti from "../assets/placements/trupti.webp";
+import dinesh from "../assets/placements/dinesh.webp";
+import damini from "../assets/placements/damini.webp";  
+import jayshree from "../assets/placements/jayshree.webp";
+import yamini from "../assets/placements/yamini.webp";
+import sakshi from "../assets/placements/sakshi.webp";
+import nayana from "../assets/placements/nayana.webp";
+import frankline from "../assets/placements/frankline.webp";
+import kship from "../assets/placements/kship.webp";
+import chandan from "../assets/placements/chandan.webp";
+import ravikiran from "../assets/placements/ravikiran.webp";
+import vaishali from "../assets/placements/vaishali.webp";
+import nilima from "../assets/placements/nilima.webp";
+import rutuja from "../assets/placements/rutuja.webp";
+import shital from "../assets/placements/shital.webp";
+import sumit from "../assets/placements/sumit.webp";
+import jyoti from "../assets/placements/jyoti.webp";
 
 const Placements = () => {
   const placements = [
     {
       name: "Trupti Nikhade",
       company: "Volody Products Pvt Ltd",
-      image: "trupti.webp",
+      image: trupti,
     },
     {
       name: "Dinesh Anandrao",
       company: "DNB Multiapps LLP",
-      image: "dinesh.webp",
+      image: dinesh,
     },
-    { name: "Damini Deogade", company: "Cognizant", image: "damini.webp" },
+    { name: "Damini Deogade", company: "Cognizant", image: damini },
 
-    { name: "Jayshree Kasture", company: "Capgemini", image: "jayshree.webp" },
-    { name: "Yamini Shegaonkar", company: "Capgemini", image: "yamini.webp" },
+    { name: "Jayshree Kasture", company: "Capgemini", image: jayshree },
+    { name: "Yamini Shegaonkar", company: "Capgemini", image: yamini },
     {
       name: "Sakshi Chaudhari",
       company: "Sara Solutions",
-      image: "sakshi.webp",
+      image: sakshi,
     },
-    { name: "Nayana Vyas", company: "Adex Labs", image: "nayana.webp" },
-    { name: "Franklin Joshi", company: "OspLabs", image: "frankline.webp" },
-    { name: "Kshipra Sharma", company: "Kumaran System", image: "kship.webp" },
-    { name: "Chandan Tumsare", company: "Codewiz Labs", image: "chandan.webp" },
+    { name: "Nayana Vyas", company: "Adex Labs", image: nayana },
+    { name: "Franklin Joshi", company: "OspLabs", image: frankline },
+    { name: "Kshipra Sharma", company: "Kumaran System", image: kship },
+    { name: "Chandan Tumsare", company: "Codewiz Labs", image: chandan  },
     {
       name: "Ravikeeran Gampawar",
       company: "Radiant Appliances & Electronics",
-      image: "ravikiran.webp",
+      image: ravikiran,
     },
     {
       name: "Vaishali Matte",
       company: "Capita India Pvt. Ltd",
-      image: "vaishali.webp",
+      image: vaishali,
     },
-    { name: "Nilima Ashok Thawari", company: "Plus 91", image: "nilima.webp" },
-    { name: "Rutuja Chilbule", company: "MNJ Software", image: "rutuja.webp" },
+    { name: "Nilima Ashok Thawari", company: "Plus 91", image: nilima },
+    { name: "Rutuja Chilbule", company: "MNJ Software", image: rutuja },
     {
       name: "Shital Motghare",
       company: "Single Point Solutions",
-      image: "shital.webp",
+      image: shital,
     },
     {
       name: "Sumit Kamble",
       company: "Sensia Energy Private Limited",
-      image: "sumit.webp",
+      image: sumit,
     },
-    { name: "Jyoti Gupta", company: "Quick Heal", image: "jyoti.webp" },
+    { name: "Jyoti Gupta", company: "Quick Heal", image: jyoti },
   ];
 
   return (
@@ -90,7 +108,7 @@ const Placements = () => {
                   {/* Square Image */}
                   <div className="ratio ratio-1x1 overflow-hidden rounded">
                     <img
-                      src={`src/assets/placements/${item.image}`}
+                      src={item.image}
                       alt={item.name}
                       className="w-100 h-100 object-fit-cover"
                     />

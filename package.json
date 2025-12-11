@@ -2,6 +2,7 @@
   "name": "softgrowth",
   "private": true,
   "version": "0.0.0",
+  "homepage": "/new",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
