@@ -4,7 +4,7 @@ const PortfolioTable = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost/react_website_softgrowth/backend/api/getdata.php")
+    fetch("https://anushkafreightcarriers.in/new/backend/api/getdata.php")
       .then((res) => res.json())
       .then((result) => {
         setData(result);

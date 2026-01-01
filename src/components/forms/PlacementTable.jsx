@@ -4,7 +4,7 @@ const PlacementTable = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost/react_website_softgrowth/backend/api/get_placement.php")
+    fetch("https://anushkafreightcarriers.in/new/backend/api/get_placement.php")
       .then((res) => res.json())
       .then((result) => {
         setData(result);
@@ -35,7 +35,7 @@ const PlacementTable = () => {
               <td>{item.id}</td>
               <td>{item.e_name}</td>
               <td>{item.c_name}</td>
-              <td><img src={`http://localhost/react_website_softgrowth/backend/p_uploads/${item.image}`} alt="image" width={200}/></td>
+              <td><img src={`https://anushkafreightcarriers.in/new/backend/p_uploads/${item.image}`} alt="image" width={200}/></td>
             </tr>
           ))}
         </tbody>

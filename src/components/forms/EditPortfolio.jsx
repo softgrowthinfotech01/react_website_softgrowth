@@ -12,7 +12,7 @@ export default function EditPortfolio({ id }) {
   // Fetch old data from JSON
   useEffect(() => {
     fetch(
-      `http://localhost/react_website_softgrowth/backend/api/get_single.php?id=${id}`
+      `https://anushkafreightcarriers.in/new/backend/api/get_single.php?id=${id}`
     )
       .then((res) => res.json())
       .then((data) => setForm(data));
@@ -31,7 +31,7 @@ export default function EditPortfolio({ id }) {
     }
 
     const res = await fetch(
-      "http://localhost/react_website_softgrowth/backend/api/update_portfolio.php",
+      "https://anushkafreightcarriers.in/new/backend/api/update_portfolio.php",
       { method: "POST", body: fd }
     );
 
@@ -68,7 +68,7 @@ export default function EditPortfolio({ id }) {
 
         <p>Old Image:</p>
         <img
-          src={`http://localhost/react_website_softgrowth/backend/uploads/${form.image}`}
+          src={`https://anushkafreightcarriers.in/new/backend/uploads/${form.image}`}
           width={200}
         />
 
