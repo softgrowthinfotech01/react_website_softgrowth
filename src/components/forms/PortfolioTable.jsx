@@ -32,40 +32,45 @@ const PortfolioTable = () => {
           {data.map((item, index) => (
             <tr key={index}>
               {/* Update these fields based on your JSON keys */}
-              <td>{index+1}</td>
+              <td>{index + 1}</td>
               <td>{item.id}</td>
               <td>{item.title}</td>
               <td>{item.description}</td>
-              <td><img src={`http://localhost/react_website_softgrowth/backend/uploads/${item.image}`} alt="image" width={200}/></td>
+              <td>
+                <img
+                  src={`https://anushkafreightcarriers.in/new/backend/uploads/${item.image}`}
+                  alt="image"
+                  width={200}
+                />
+              </td>
               <td>
                 <button
-  onClick={async () => {
-    const res = await fetch(
-      `http://localhost/react_website_softgrowth/backend/api/port_delete.php?id=${item.id}`,
-      { method: "GET" }
-    );
+                  onClick={async () => {
+                    const res = await fetch(
+                      `http://localhost/react_website_softgrowth/backend/api/port_delete.php?id=${item.id}`,
+                      { method: "GET" }
+                    );
 
-    const data = await res.json();
+                    const data = await res.json();
 
-    if (data.status) {
-      alert("Record deleted successfully!");
+                    if (data.status) {
+                      alert("Record deleted successfully!");
 
-      // Update table instantly
-      setData(data.data);
-    } else {
-      alert("Error deleting record!");
-    }
-  }}
->
-  Delete
-</button>
-
+                      // Update table instantly
+                      setData(data.data);
+                    } else {
+                      alert("Error deleting record!");
+                    }
+                  }}
+                >
+                  Delete
+                </button>
               </td>
             </tr>
           ))}
         </tbody>
         <tfoot>
-             <tr>
+          <tr>
             {/* Change headings depending on your JSON structure */}
             <th>Sr. No.</th>
             <th>ID</th>

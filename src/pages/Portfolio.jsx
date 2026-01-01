@@ -1,144 +1,159 @@
+import { useEffect, useState } from "react";
+
 export default function Portfolio() {
-  const portfolioItems = [
-    {
-      img: "./src/assets/portfolio/bhumi_logo.webp",
-      title: "Bhumi",
-      category: "filter-dynamic",
-      link: "https://softgrowthinfotech.com/new/home.php",
-    },
-    {
-      img: "./src/assets/portfolio/wildlife_adventure.webp",
-      title: "tadoba wildlife adventure",
-      category: "filter-web",
-      link: "http://www.tadobawildlifeadventure.com/",
-    },
-    {
-      img: "./src/assets/portfolio/elysian.webp",
-      title: "elysian",
-      category: "filter-dynamic",
-      link: "https://elysianartify.com/",
-    },
-    {
-      img: "./src/assets/portfolio/easycracker.webp",
-      title: "easy cracker",
-      category: "filter-static",
-      link: "https://easycracker.in/",
-    },
-    {
-      img: "./src/assets/portfolio/tadoba_wildlife.webp",
-      title: "tadoba wildlife resort",
-      category: "filter-web",
-      link: "http://tadobawildliferesort.in/",
-    },
-    {
-      img: "./src/assets/portfolio/atma.webp",
-      title: "Atma",
-      category: "filter-dynamic",
-      link: "https://www.atmachandrapur.in/en/",
-    },
-    {
-      img: "./src/assets/portfolio/ctvnews.webp",
-      title: "ctv news",
-      category: "filter-static",
-      link: "https://ctvnewschandrapur.com/",
-    },
-    {
-      img: "./src/assets/portfolio/akojwar.png",
-      title: "akojwar jwellers",
-      category: "filter-static",
-      link: "https://akojwarjewellers.com/",
-    },
-    {
-      img: "./src/assets/portfolio/pahel.webp",
-      title: "pahel",
-      category: "filter-web",
-      link: "https://www.pahelmultipurposesociety.com/",
-    },
-    {
-      img: "./src/assets/portfolio/chandrapur_police.webp",
-      title: "chandrapur police",
-      category: "filter-web",
-      link: "https://chandrapurpolice.gov.in/",
-    },
-    {
-      img: "./src/assets/portfolio/shashwat.webp",
-      title: "shashwat",
-      category: "filter-web",
-      link: "http://softgrowthblog.com/agrinomics/",
-    },
-    {
-      img: "./src/assets/portfolio/ashuda.webp",
-      title: "Ashuda",
-      category: "filter-web",
-      link: "http://www.ashuda.in/home",
-    },
-    {
-      img: "./src/assets/portfolio/ability.png",
-      title: "Ability",
-      category: "filter-static",
-      link: "#",
-    },
-    {
-      img: "./src/assets/portfolio/archivault.png",
-      title: "Archivault",
-      category: "filter-web",
-      link: "#",
-    },
-    {
-      img: "./src/assets/portfolio/chatap.png",
-      title: "Chatap",
-      category: "filter-static",
-      link: "#",
-    },
-    {
-      img: "./src/assets/portfolio/estern.png",
-      title: "Estern",
-      category: "filter-web",
-      link: "#",
-    },
-    {
-      img: "./src/assets/portfolio/gurukripa.png",
-      title: "Gurukripa",
-      category: "filter-static",
-      link: "#",
-    },
-    {
-      img: "./src/assets/portfolio/gurusai.png",
-      title: "Gurusai",
-      category: "filter-static",
-      link: "#",
-    },
-    {
-      img: "./src/assets/portfolio/lake_view.png",
-      title: "Lake View",
-      category: "filter-web",
-      link: "#",
-    },
-    {
-      img: "./src/assets/portfolio/neon.png",
-      title: "Neon",
-      category: "filter-dynamic",
-      link: "#",
-    },
-    {
-      img: "./src/assets/portfolio/orbit.png",
-      title: "Orbit",
-      category: "filter-web",
-      link: "#",
-    },
-    {
-      img: "./src/assets/portfolio/thakre.png",
-      title: "Thakre",
-      category: "filter-static",
-      link: "#",
-    },
-    {
-      img: "./src/assets/portfolio/vkart.png",
-      title: "Vkart",
-      category: "filter-web",
-      link: "#",
-    },
-  ];
+  // const portfolioItems = [
+  //   {
+  //     img: "./src/assets/portfolio/bhumi_logo.webp",
+  //     title: "Bhumi",
+  //     category: "filter-dynamic",
+  //     link: "https://softgrowthinfotech.com/new/home.php",
+  //   },
+  //   {
+  //     img: "./src/assets/portfolio/wildlife_adventure.webp",
+  //     title: "tadoba wildlife adventure",
+  //     category: "filter-web",
+  //     link: "http://www.tadobawildlifeadventure.com/",
+  //   },
+  //   {
+  //     img: "./src/assets/portfolio/elysian.webp",
+  //     title: "elysian",
+  //     category: "filter-dynamic",
+  //     link: "https://elysianartify.com/",
+  //   },
+  //   {
+  //     img: "./src/assets/portfolio/easycracker.webp",
+  //     title: "easy cracker",
+  //     category: "filter-static",
+  //     link: "https://easycracker.in/",
+  //   },
+  //   {
+  //     img: "./src/assets/portfolio/tadoba_wildlife.webp",
+  //     title: "tadoba wildlife resort",
+  //     category: "filter-web",
+  //     link: "http://tadobawildliferesort.in/",
+  //   },
+  //   {
+  //     img: "./src/assets/portfolio/atma.webp",
+  //     title: "Atma",
+  //     category: "filter-dynamic",
+  //     link: "https://www.atmachandrapur.in/en/",
+  //   },
+  //   {
+  //     img: "./src/assets/portfolio/ctvnews.webp",
+  //     title: "ctv news",
+  //     category: "filter-static",
+  //     link: "https://ctvnewschandrapur.com/",
+  //   },
+  //   {
+  //     img: "./src/assets/portfolio/akojwar.png",
+  //     title: "akojwar jwellers",
+  //     category: "filter-static",
+  //     link: "https://akojwarjewellers.com/",
+  //   },
+  //   {
+  //     img: "./src/assets/portfolio/pahel.webp",
+  //     title: "pahel",
+  //     category: "filter-web",
+  //     link: "https://www.pahelmultipurposesociety.com/",
+  //   },
+  //   {
+  //     img: "./src/assets/portfolio/chandrapur_police.webp",
+  //     title: "chandrapur police",
+  //     category: "filter-web",
+  //     link: "https://chandrapurpolice.gov.in/",
+  //   },
+  //   {
+  //     img: "./src/assets/portfolio/shashwat.webp",
+  //     title: "shashwat",
+  //     category: "filter-web",
+  //     link: "http://softgrowthblog.com/agrinomics/",
+  //   },
+  //   {
+  //     img: "./src/assets/portfolio/ashuda.webp",
+  //     title: "Ashuda",
+  //     category: "filter-web",
+  //     link: "http://www.ashuda.in/home",
+  //   },
+  //   {
+  //     img: "./src/assets/portfolio/ability.png",
+  //     title: "Ability",
+  //     category: "filter-static",
+  //     link: "#",
+  //   },
+  //   {
+  //     img: "./src/assets/portfolio/archivault.png",
+  //     title: "Archivault",
+  //     category: "filter-web",
+  //     link: "#",
+  //   },
+  //   {
+  //     img: "./src/assets/portfolio/chatap.png",
+  //     title: "Chatap",
+  //     category: "filter-static",
+  //     link: "#",
+  //   },
+  //   {
+  //     img: "./src/assets/portfolio/estern.png",
+  //     title: "Estern",
+  //     category: "filter-web",
+  //     link: "#",
+  //   },
+  //   {
+  //     img: "./src/assets/portfolio/gurukripa.png",
+  //     title: "Gurukripa",
+  //     category: "filter-static",
+  //     link: "#",
+  //   },
+  //   {
+  //     img: "./src/assets/portfolio/gurusai.png",
+  //     title: "Gurusai",
+  //     category: "filter-static",
+  //     link: "#",
+  //   },
+  //   {
+  //     img: "./src/assets/portfolio/lake_view.png",
+  //     title: "Lake View",
+  //     category: "filter-web",
+  //     link: "#",
+  //   },
+  //   {
+  //     img: "./src/assets/portfolio/neon.png",
+  //     title: "Neon",
+  //     category: "filter-dynamic",
+  //     link: "#",
+  //   },
+  //   {
+  //     img: "./src/assets/portfolio/orbit.png",
+  //     title: "Orbit",
+  //     category: "filter-web",
+  //     link: "#",
+  //   },
+  //   {
+  //     img: "./src/assets/portfolio/thakre.png",
+  //     title: "Thakre",
+  //     category: "filter-static",
+  //     link: "#",
+  //   },
+  //   {
+  //     img: "./src/assets/portfolio/vkart.png",
+  //     title: "Vkart",
+  //     category: "filter-web",
+  //     link: "#",
+  //   },
+  // ];
+
+const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("https://anushkafreightcarriers.in/new/backend/api/getdata.php")
+      .then((res) => res.json())
+      .then((result) => {
+        setData(result);
+      })
+      .catch((err) => console.error(err));
+  }, []);
+
+
 
   return (
     <>
@@ -175,14 +190,14 @@ export default function Portfolio() {
                   data-aos="fade-up"
                   data-aos-delay={200}
                 >
-                  {portfolioItems.map((item, index) => (
+                  {data.map((item, index) => (
                     <div
-                      key={index}
+                      key={index+1}
                       className={`col-lg-4 col-md-6 portfolio-item ${item.category}`}
                     >
                       <div className="portfolio-wrap">
                         <img
-                          src={item.img}
+                           src={`https://anushkafreightcarriers.in/new/backend/uploads/${item.image}`}
                           className="img-fluid"
                           alt={item.title}
                         />
@@ -191,7 +206,7 @@ export default function Portfolio() {
                           <p>Web</p>
                           <div className="portfolio-links">
                             <a
-                              href={item.img}
+                              href={item.image}
                               className="portfolio-lightbox"
                               data-gallery="portfolioGallery"
                             >
