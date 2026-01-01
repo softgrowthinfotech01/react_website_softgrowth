@@ -4,7 +4,7 @@ const PortfolioTable = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost/react_website_softgrowth/backend/api/getdata.php")
+    fetch("https://anushkafreightcarriers.in/new/backend/api/getdata.php")
       .then((res) => res.json())
       .then((result) => {
         setData(result);
@@ -36,12 +36,12 @@ const PortfolioTable = () => {
               <td>{item.id}</td>
               <td>{item.title}</td>
               <td>{item.description}</td>
-              <td><img src={`http://localhost/react_website_softgrowth/backend/uploads/${item.image}`} alt="image" width={200}/></td>
+              <td><img src={`https://anushkafreightcarriers.in/new/backend/uploads/${item.image}`} alt="image" width={200}/></td>
               <td>
                 <button
   onClick={async () => {
     const res = await fetch(
-      `http://localhost/react_website_softgrowth/backend/api/port_delete.php?id=${item.id}`,
+      `https://anushkafreightcarriers.in/new/backend/api/port_delete.php?id=${item.id}`,
       { method: "GET" }
     );
 
