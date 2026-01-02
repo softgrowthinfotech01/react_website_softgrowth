@@ -18,35 +18,66 @@ const PlacementTable = () => {
       <table className="table" border="1" cellPadding="10">
         <thead>
           <tr>
-            {/* Change headings depending on your JSON structure */}
             <th>Sr. No.</th>
             <th>ID</th>
             <th>Name</th>
             <th>Company</th>
             <th>image</th>
+            <th>Action</th> {/* added */}
           </tr>
         </thead>
 
         <tbody>
           {data.map((item, index) => (
             <tr key={index}>
-              {/* Update these fields based on your JSON keys */}
-              <td>{index+1}</td>
+              <td>{index + 1}</td>
               <td>{item.id}</td>
               <td>{item.e_name}</td>
               <td>{item.c_name}</td>
-              <td><img src={`https://anushkafreightcarriers.in/new/backend/p_uploads/${item.image}`} alt="image" width={200}/></td>
+              <td>
+                <img
+                  src={`https://anushkafreightcarriers.in/new/backend/p_uploads/${item.image}`}
+                  alt="image"
+                  width={200}
+                />
+              </td>
+              <td>
+                <button
+                  onClick={async () => {
+                    const res = await fetch(
+                      `https://anushkafreightcarriers.in/new/backend/api/placement_delete.php?id=${item.id}`,
+                      { method: "GET" }
+                    );
+
+                    const response = await res.json();
+
+                    if (response.status) {
+                      alert("Record deleted successfully!");
+
+                      // remove row instantly
+                      setData((prev) =>
+                        prev.filter((d) => d.id !== item.id)
+                      );
+                    } else {
+                      alert("Error deleting record!");
+                    }
+                  }}
+                >
+                  Delete
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
+
         <tfoot>
-             <tr>
-            {/* Change headings depending on your JSON structure */}
+          <tr>
             <th>Sr. No.</th>
             <th>ID</th>
             <th>Name</th>
             <th>Company</th>
             <th>image</th>
+            <th>Action</th> {/* added */}
           </tr>
         </tfoot>
       </table>
