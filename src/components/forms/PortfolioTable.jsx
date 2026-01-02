@@ -14,11 +14,10 @@ const PortfolioTable = () => {
 
   return (
     <div>
-      <h2>Placement Data</h2>
+      <h2>Portfolio Data</h2>
       <table className="table" border="1" cellPadding="10">
         <thead>
           <tr>
-            {/* Change headings depending on your JSON structure */}
             <th>Sr. No.</th>
             <th>ID</th>
             <th>Title</th>
@@ -31,7 +30,6 @@ const PortfolioTable = () => {
         <tbody>
           {data.map((item, index) => (
             <tr key={index}>
-              {/* Update these fields based on your JSON keys */}
               <td>{index + 1}</td>
               <td>{item.id}</td>
               <td>{item.title}</td>
@@ -47,17 +45,19 @@ const PortfolioTable = () => {
                 <button
                   onClick={async () => {
                     const res = await fetch(
-                      `http://localhost/react_website_softgrowth/backend/api/port_delete.php?id=${item.id}`,
+                      `https://anushkafreightcarriers.in/new/backend/api/port_delete.php?id=${item.id}`,
                       { method: "GET" }
                     );
 
-                    const data = await res.json();
+                    const response = await res.json();
 
-                    if (data.status) {
+                    if (response.status) {
                       alert("Record deleted successfully!");
 
-                      // Update table instantly
-                      setData(data.data);
+                      // instant UI update
+                      setData((prev) =>
+                        prev.filter((d) => d.id !== item.id)
+                      );
                     } else {
                       alert("Error deleting record!");
                     }
@@ -69,9 +69,9 @@ const PortfolioTable = () => {
             </tr>
           ))}
         </tbody>
+
         <tfoot>
           <tr>
-            {/* Change headings depending on your JSON structure */}
             <th>Sr. No.</th>
             <th>ID</th>
             <th>Title</th>

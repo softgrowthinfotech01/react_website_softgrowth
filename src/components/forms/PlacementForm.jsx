@@ -63,7 +63,7 @@ const PlacementForm = () => {
           <input
             type="text"
             className="form-control"
-            placeholder="Enter Your Name ..."
+            placeholder="Enter Your Name..."
             required
             onChange={(e) => setForm({ ...form, e_name: e.target.value })}
           />
