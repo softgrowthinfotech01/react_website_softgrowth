@@ -18,7 +18,7 @@ const PlacementForm = () => {
     formData.append("image", form.image);
 
     const res = await fetch(
-      "https://anushkafreightcarriers.in/new/backend/api/placement.php",
+      "https://softgrowthinfotech.com/backend/api/placement.php",
       {
         method: "POST",
         body: formData,

@@ -73,7 +73,7 @@ const Placements = () => {
  const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://anushkafreightcarriers.in/new/backend/api/get_placement.php")
+    fetch("https://softgrowthinfotech.com/backend/api/get_placement.php")
       .then((res) => res.json())
       .then((result) => {
         setData(result);
@@ -121,7 +121,7 @@ const Placements = () => {
                   {/* Square Image */}
                   <div className="ratio ratio-1x1 overflow-hidden rounded">
                     <img
-                     src={`https://anushkafreightcarriers.in/new/backend/p_uploads/${item.image}`}
+                     src={`https://softgrowthinfotech.com/backend/p_uploads/${item.image}`}
                       alt={item.e_name}
                       className="w-100 h-100 object-fit-cover"
                     />

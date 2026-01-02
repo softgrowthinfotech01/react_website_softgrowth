@@ -18,7 +18,7 @@ const PorpolioForm = () => {
     formData.append("image", form.image);
 
     const res = await fetch(
-      "https://anushkafreightcarriers.in/new/backend/api/save.php",
+      "https://softgrowthinfotech.com/backend/api/save.php",
       {
         method: "POST",
         body: formData,

@@ -145,7 +145,7 @@ export default function Portfolio() {
 const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://anushkafreightcarriers.in/new/backend/api/getdata.php")
+    fetch("https://softgrowthinfotech.com/backend/api/getdata.php")
       .then((res) => res.json())
       .then((result) => {
         setData(result);
@@ -197,7 +197,7 @@ const [data, setData] = useState([]);
                     >
                       <div className="portfolio-wrap">
                         <img
-                           src={`https://anushkafreightcarriers.in/new/backend/uploads/${item.image}`}
+                           src={`https://softgrowthinfotech.com/backend/uploads/${item.image}`}
                           className="img-fluid"
                           alt={item.title}
                         />

@@ -18,7 +18,7 @@ const Placements = lazy(() => import("./pages/placements"));
 
 function App() {
   return (
-    <BrowserRouter basename="/new">
+    <BrowserRouter basename="/">
       <Suspense fallback={<div className="text-center p-5">Loading...</div>}>
         <Routes>
           <Route element={<MainLayout />}>
