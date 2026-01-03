@@ -1,9 +1,16 @@
 import logo from "../assets/soft_logo_org.webp";
 import line from "../assets/lineSeparatorWhite.webp";
+import footerBg from "../assets/footer-bg.webp";
 
 export default function Navbar() {
   return (
-    <footer id="footer" className="footer">
+    <footer
+      id="footer"
+      className="footer"
+      style={{
+        background: `url(${footerBg}) center center / cover no-repeat`,
+      }}
+    >
       <div className="footer-top text-left pb-0">
         <div className="container">
           <div className="row justify-content-center">
@@ -16,6 +23,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+
       <div
         className="footer-mid footer-top text-left pb-0"
         style={{ textAlign: "left !important" }}
@@ -23,46 +31,20 @@ export default function Navbar() {
         <div className="container">
           <div className="row justify-content-space-between">
             <div className="col-md-4">
-              <h2
-                className="text-uppercase"
-                data-scroll-reveal="enter left move 10px over 1s after 0.2s"
-              >
-                About Softgrowth
-              </h2>
-              <img
-                src={line}
-                className="img-responsive lineSeparator py-4"
-                data-scroll-reveal="enter left move 10px over 1s after 0.3s"
-                alt="separator"
-              />
-              <p
-                data-scroll-reveal="enter left move 10px over 1s after 0.3s"
-                className="my-1 h6"
-              >
+              <h2 className="text-uppercase">About Softgrowth</h2>
+              <img src={line} className="img-responsive lineSeparator py-4" alt="separator" />
+              <p className="my-1 h6">
                 As a top best web design company in Chandrapur we provide all
                 facilities related to the digitalization of your business.
               </p>
             </div>
+
             <div className="col-md-4">
-              <h2
-                className="text-uppercase"
-                data-scroll-reveal="enter left move 10px over 1s after 0.2s"
-              >
-                Newsletter
-              </h2>
-              <img
-                src={line}
-                className="img-responsive lineSeparator py-4"
-                data-scroll-reveal="enter left move 10px over 1s after 0.3s"
-                alt="separator"
-              />
-              <div
-                className="form-group"
-                data-scroll-reveal="enter left move 10px over 1s after 0.3s"
-              >
+              <h2 className="text-uppercase">Newsletter</h2>
+              <img src={line} className="img-responsive lineSeparator py-4" alt="separator" />
+              <div className="form-group">
                 <div className="input-group">
                   <div className="input-group-addon">
-                    {/* <i class="fa fa-envelope-o"></i> */}
                     <i className="bx bx-envelope p-3" />
                   </div>
                   <input
@@ -73,26 +55,16 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
+
             <div className="col-md-4">
-              <h2
-                className="text-uppercase"
-                data-scroll-reveal="enter left move 10px over 1s after 0.2s"
-              >
-                Contact
-              </h2>
-              <img
-                src={line}
-                className="img-responsive lineSeparator py-4"
-                data-scroll-reveal="enter left move 10px over 1s after 0.3s"
-                alt="separator"
-              />
+              <h2 className="text-uppercase">Contact</h2>
+              <img src={line} className="img-responsive lineSeparator py-4" alt="separator" />
               <div className="row h6">
-                <div className="col-md-6 ">
+                <div className="col-md-6">
                   <ul className="infoContact list-unstyled text-light">
                     <i className="bx bx-current-location" />
                     <li>
-                      {/* <i class="fa fa-location-arrow"></i> */}
-                      Global Tower, Kosara Road, Datala, Kosara,Chandrapur.
+                      Global Tower, Kosara Road, Datala, Kosara, Chandrapur.
                       Maharashtra - 442402
                     </li>
                   </ul>
@@ -102,17 +74,16 @@ export default function Navbar() {
                     </li>
                   </ul>
                 </div>
+
                 <div className="col-md-6">
                   <ul className="infoContact list-unstyled text-light">
-                    <li className="">
-                      <i className="bx bx-envelope" />
-                      info@softgrowthinfotech.com
+                    <li>
+                      <i className="bx bx-envelope" /> info@softgrowthinfotech.com
                     </li>
                     <li>softgrowthinfotech@gmail.com</li>
                   </ul>
                   <ul className="infoContact list-unstyled">
                     <li>
-                      {/* <i class="bx bx-clock"></i> */}
                       <i className="bx bx-time-five" /> Monday - Saturday
                     </li>
                     <li>9.30 AM - 7.30 PM</li>
@@ -122,52 +93,36 @@ export default function Navbar() {
             </div>
           </div>
         </div>
+
         <div className="container footer-bottom clearfix pt-0">
-          <div className="social-links  text-center p-3 ">
+          <div className="social-links text-center p-3">
             <a href="https://x.com/SoftgrowthIndia" className="twitter">
               <i className="bx bxl-twitter" />
             </a>
-            <a
-              href="https://www.facebook.com/softgrowthinfotech/"
-              className="facebook"
-            >
+            <a href="https://www.facebook.com/softgrowthinfotech/" className="facebook">
               <i className="bx bxl-facebook" />
             </a>
-            <a
-              href="https://www.instagram.com/softgrowth_infotech/"
-              className="instagram"
-            >
+            <a href="https://www.instagram.com/softgrowth_infotech/" className="instagram">
               <i className="bx bxl-instagram" />
             </a>
-            <a
-              href="https://www.youtube.com/channel/UCqCPPXJhtHVxdVo6KLgf_Pw/featured"
-              className="google-plus"
-            >
+            <a href="https://www.youtube.com/channel/UCqCPPXJhtHVxdVo6KLgf_Pw/featured" className="google-plus">
               <i className="bx bxl-youtube" />
             </a>
-            <a
-              href="https://in.linkedin.com/company/softgrowth-infotech"
-              className="linkedin"
-            >
+            <a href="https://in.linkedin.com/company/softgrowth-infotech" className="linkedin">
               <i className="bx bxl-linkedin" />
             </a>
           </div>
+
           <div className="copyright">
-            © Copyright{" "}
-            <strong>
-              <span>Softgrowth Infotech</span>
-            </strong>
-            . All Rights Reserved
+            © Copyright <strong><span>Softgrowth Infotech</span></strong>. All Rights Reserved
           </div>
+
           <div className="credits">
             Designed by{" "}
             <a href="https://softgrowthinfotech.com/" target="_blank">
               Softgrowth Infotech
             </a>
           </div>
-          {/* <div class="credits">
-Distributed by <a href="https://themewagon.com/" target="_blank">Themewagon</a>
-    </div> */}
         </div>
       </div>
     </footer>
