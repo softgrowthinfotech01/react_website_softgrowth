@@ -4,7 +4,7 @@ const PortfolioTable = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://anushkafreightcarriers.in/new/backend/api/getdata.php")
+    fetch("https://softgrowthinfotech.com/backend/api/getdata.php")
       .then((res) => res.json())
       .then((result) => {
         setData(result);
@@ -36,7 +36,7 @@ const PortfolioTable = () => {
               <td>{item.description}</td>
               <td>
                 <img
-                  src={`https://anushkafreightcarriers.in/new/backend/uploads/${item.image}`}
+                  src={`https://softgrowthinfotech.com/backend/uploads/${item.image}`}
                   alt="image"
                   width={200}
                 />
@@ -45,7 +45,7 @@ const PortfolioTable = () => {
                 <button
                   onClick={async () => {
                     const res = await fetch(
-                      `https://anushkafreightcarriers.in/new/backend/api/port_delete.php?id=${item.id}`,
+                      `https://softgrowthinfotech.com/backend/api/port_delete.php?id=${item.id}`,
                       { method: "GET" }
                     );
 

@@ -4,7 +4,7 @@ const PlacementTable = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://anushkafreightcarriers.in/new/backend/api/get_placement.php")
+    fetch("https://softgrowthinfotech.com/backend/api/get_placement.php")
       .then((res) => res.json())
       .then((result) => {
         setData(result);
@@ -36,7 +36,7 @@ const PlacementTable = () => {
               <td>{item.c_name}</td>
               <td>
                 <img
-                  src={`https://anushkafreightcarriers.in/new/backend/p_uploads/${item.image}`}
+                  src={`https://softgrowthinfotech.com/backend/p_uploads/${item.image}`}
                   alt="image"
                   width={200}
                 />
@@ -45,7 +45,7 @@ const PlacementTable = () => {
                 <button
                   onClick={async () => {
                     const res = await fetch(
-                      `https://anushkafreightcarriers.in/new/backend/api/placement_delete.php?id=${item.id}`,
+                      `https://softgrowthinfotech.com/backend/api/placement_delete.php?id=${item.id}`,
                       { method: "GET" }
                     );
 
