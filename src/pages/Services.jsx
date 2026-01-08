@@ -1,10 +1,10 @@
 // import images
 import React from "react";
 
-import servicesImage1 from "../assets/services/1lQn7Wpv.webp";
-import servicesImage2 from "../assets/services/TFjB_5GL.webp";
-import servicesImage3 from "../assets/services/KGldtclE.webp";
-import servicesImage4 from "../assets/services/soft_training.webp";
+import servicesImage1 from "../assets/services/services1.webp";
+import servicesImage2 from "../assets/services/services2.webp";
+import servicesImage3 from "../assets/services/services3.webp";
+import servicesImage4 from "../assets/services/services4.webp";
 
 export default function Services() {
   return (
