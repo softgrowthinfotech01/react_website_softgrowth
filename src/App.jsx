@@ -11,6 +11,7 @@ import MyForm from "./pages/MyForm";
 import FrontendCourse from "./pages/FrontendCourse";
 import TestingCourse from "./pages/TestingCourse";
 import EditPortfolio from "./components/forms/EditPortfolio";
+import ScrollToTop from "./components/ScrollToTop";
 
 // Only these two are lazy loaded
 const Portfolio = lazy(() => import("./pages/Portfolio"));
@@ -19,6 +20,7 @@ const Placements = lazy(() => import("./pages/placements"));
 function App() {
   return (
     <BrowserRouter basename="/">
+       <ScrollToTop />
       <Suspense fallback={<div className="text-center p-5">Loading...</div>}>
         <Routes>
           <Route element={<MainLayout />}>
