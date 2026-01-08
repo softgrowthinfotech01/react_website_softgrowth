@@ -23,7 +23,7 @@ const PlacementTable = () => {
             <th>Name</th>
             <th>Company</th>
             <th>image</th>
-            <th>Action</th> {/* added */}
+            <th>Action</th>
           </tr>
         </thead>
 
@@ -35,11 +35,15 @@ const PlacementTable = () => {
               <td>{item.e_name}</td>
               <td>{item.c_name}</td>
               <td>
-                <img
-                  src={`https://softgrowthinfotech.com/backend/p_uploads/${item.image}`}
-                  alt="image"
-                  width={200}
-                />
+                {item.image ? (
+                  <img
+                    src={`https://softgrowthinfotech.com/backend/p_uploads/${item.image}`}
+                    alt="image"
+                    width={200}
+                  />
+                ) : (
+                  <span>No Image</span>
+                )}
               </td>
               <td>
                 <button
@@ -77,7 +81,7 @@ const PlacementTable = () => {
             <th>Name</th>
             <th>Company</th>
             <th>image</th>
-            <th>Action</th> {/* added */}
+            <th>Action</th>
           </tr>
         </tfoot>
       </table>

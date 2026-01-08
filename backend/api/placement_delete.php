@@ -1,48 +1,87 @@
 <?php
 header("Content-Type: application/json");
 header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST");
 
-$file = "../placement.json";  // your JSON database
+// JSON file path
+$file = "../placement.json";
 
-// If file doesn't exist
+// Check file exists
 if (!file_exists($file)) {
-    echo json_encode(["status" => false, "message" => "Data file not found"]);
+    echo json_encode([
+        "status" => false,
+        "message" => "Data file not found"
+    ]);
     exit;
 }
 
-// Read id from GET
-if (!isset($_GET['id'])) {
-    echo json_encode(["status" => false, "message" => "ID is required"]);
+// Get ID (supports GET or POST)
+$id = $_GET['id'] ?? $_POST['id'] ?? null;
+
+if (!$id) {
+    echo json_encode([
+        "status" => false,
+        "message" => "ID is required"
+    ]);
     exit;
 }
 
-$id = $_GET['id'];
-
-// Read current JSON data
+// Read JSON data
 $jsonData = file_get_contents($file);
 $data = json_decode($jsonData, true);
 
-// If JSON is invalid
+// Validate JSON
 if (!is_array($data)) {
-    echo json_encode(["status" => false, "message" => "Invalid JSON"]);
+    echo json_encode([
+        "status" => false,
+        "message" => "Invalid JSON data"
+    ]);
     exit;
 }
 
-// Filter out the deleted record
-$updatedData = array_filter($data, function ($item) use ($id) {
-    return $item['id'] != $id;
-});
+$updatedData = [];
+$recordFound = false;
 
-// Re-index array (optional but recommended)
-$updatedData = array_values($updatedData);
+foreach ($data as $item) {
+
+    // Match record
+    if ($item['id'] == $id) {
+        $recordFound = true;
+
+        // Delete image if exists & not empty
+        if (!empty($item['image'])) {
+            $imagePath = "../p_uploads/" . $item['image'];
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+        }
+
+        continue; // Skip this record (delete)
+    }
+
+    $updatedData[] = $item;
+}
+
+// If ID not found
+if (!$recordFound) {
+    echo json_encode([
+        "status" => false,
+        "message" => "Record not found"
+    ]);
+    exit;
+}
 
 // Save updated JSON
-file_put_contents($file, json_encode($updatedData, JSON_PRETTY_PRINT));
+file_put_contents(
+    $file,
+    json_encode($updatedData, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)
+);
 
-// Response back to React
+// Success response
 echo json_encode([
     "status" => true,
     "message" => "Record deleted successfully",
     "data" => $updatedData
 ]);
+
 ?>
