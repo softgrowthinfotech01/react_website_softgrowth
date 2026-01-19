@@ -4,10 +4,11 @@ const ReviewForm = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://softgrowthinfotech.com/backend/api/thoughts/get.php")
+    fetch(
+      "http://localhost/react_website_softgrowth/backend/api/thoughts/get.php"
+    )
       .then((res) => res.json())
       .then((result) => {
-        // if API returns { status: true, data: [] }
         if (result.status) {
           setData(result.data);
         }
@@ -18,7 +19,8 @@ const ReviewForm = () => {
   return (
     <div className="container-fluid p-3">
       <div className="table-responsive">
-        <h1>Review Table</h1>
+        <h1 className="mb-3">Review Table</h1>
+
         <table className="table table-bordered table-striped align-middle">
           <thead className="table-light">
             <tr>
@@ -32,21 +34,25 @@ const ReviewForm = () => {
 
           <tbody>
             {data.length > 0 ? (
-              data.map((item, index) => (
-                <tr key={index}>
+              data.map((item) => (
+                <tr key={item.id}>
                   <td>
                     <img
-                      src={item.image || "https://via.placeholder.com/60"}
+                      src={
+                        item.image
+                          ? `http://localhost/react_website_softgrowth/backend/${item.image}`
+                          : "https://via.placeholder.com/60"
+                      }
                       alt="Profile"
-                      className="rounded-circle"
+                      className="rounded-circle object-fit-cover"
                       width="60"
                       height="60"
                     />
                   </td>
-                  <td>{item.name || item.title}</td>
-                  <td>{item.position || "Frontend Developer"}</td>
-                  <td>{item.company || "Tech Solutions Pvt Ltd"}</td>
-                  <td>{item.description}</td>
+                  <td>{item.name}</td>
+                  <td>{item.current_position}</td>
+                  <td>{item.title}</td>
+                  <td>{item.review}</td>
                 </tr>
               ))
             ) : (

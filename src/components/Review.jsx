@@ -13,6 +13,7 @@ const Review = () => {
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
+
     setFormData({
       ...formData,
       [name]: files ? files[0] : value,
@@ -23,15 +24,13 @@ const Review = () => {
     e.preventDefault();
 
     const payload = new FormData();
-    payload.append("name", formData.name);
-    payload.append("current_position", formData.current_position);
-    payload.append("title", formData.title);
-    payload.append("review", formData.review);
-    payload.append("image", formData.image);
+    Object.keys(formData).forEach((key) => {
+      payload.append(key, formData[key]);
+    });
 
     try {
       const res = await fetch(
-        "https://softgrowthinfotech.com/backend/api/thoughts/thoughts.php",
+        "http://localhost/react_website_softgrowth/backend/api/thoughts/thoughts.php",
         {
           method: "POST",
           body: payload,
@@ -60,38 +59,29 @@ const Review = () => {
   };
 
   return (
-    <div className="py-5 ">
+    <div className="py-5">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-8">
-            <div className="border rounded p-4 ">
-              {/* Header */}
-              <div className="mb-4">
-                <h4 className="fw-bold">Submit Your Review</h4>
-                <p className=" mb-0">
-                  Share your experience as a student or client
-                </p>
-              </div>
+            <div className="border rounded p-4">
+              <h4 className="fw-bold mb-1">Submit Your Review</h4>
+              <p className="mb-3">Share your experience as a student or client</p>
 
               {message && <p className="text-success">{message}</p>}
 
               <form onSubmit={handleSubmit}>
-                {/* Name */}
                 <div className="mb-3">
-                  <label className="form-label fw-semibold">
-                    Full Name
-                  </label>
+                  <label className="form-label fw-semibold">Full Name</label>
                   <input
                     type="text"
                     name="name"
                     className="form-control"
-                    placeholder="Enter your name"
+                    value={formData.name}
                     onChange={handleChange}
                     required
                   />
                 </div>
 
-                {/* Role */}
                 <div className="mb-3">
                   <label className="form-label fw-semibold">
                     Current Position
@@ -100,13 +90,12 @@ const Review = () => {
                     type="text"
                     name="current_position"
                     className="form-control"
-                    placeholder="Enter your current position"
+                    value={formData.current_position}
                     onChange={handleChange}
                     required
                   />
                 </div>
 
-                {/* Title */}
                 <div className="mb-3">
                   <label className="form-label fw-semibold">
                     Company Name
@@ -115,28 +104,24 @@ const Review = () => {
                     type="text"
                     name="title"
                     className="form-control"
-                    placeholder="Company Name"
+                    value={formData.title}
                     onChange={handleChange}
                     required
                   />
                 </div>
 
-                {/* Review */}
                 <div className="mb-3">
-                  <label className="form-label fw-semibold">
-                    Your Review
-                  </label>
+                  <label className="form-label fw-semibold">Your Review</label>
                   <textarea
                     name="review"
                     className="form-control"
                     rows="5"
-                    placeholder="Write your experience here..."
+                    value={formData.review}
                     onChange={handleChange}
                     required
                   ></textarea>
                 </div>
 
-                {/* Image */}
                 <div className="mb-4">
                   <label className="form-label fw-semibold">
                     Profile Image
@@ -149,7 +134,6 @@ const Review = () => {
                   />
                 </div>
 
-                {/* Submit */}
                 <button type="submit" className="btn btn-dark px-4">
                   Submit Review
                 </button>
