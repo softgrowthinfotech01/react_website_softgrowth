@@ -11,6 +11,7 @@ const ReviewForm = () => {
       .then((result) => {
         if (result.status) {
           setData(result.data);
+          console.log(result.data);
         }
       })
       .catch((err) => console.error(err));
@@ -40,7 +41,7 @@ const ReviewForm = () => {
                     <img
                       src={
                         item.image
-                          ? `http://localhost/react_website_softgrowth/backend/${item.image}`
+                          ? `http://localhost/react_website_softgrowth/backend/api/thoughts/uploads/${item.image}`
                           : "https://via.placeholder.com/60"
                       }
                       alt="Profile"
@@ -50,8 +51,8 @@ const ReviewForm = () => {
                     />
                   </td>
                   <td>{item.name}</td>
-                  <td>{item.current_position}</td>
-                  <td>{item.title}</td>
+                  <td>{item.position}</td>
+                  <td>{item.company}</td>
                   <td>{item.review}</td>
                 </tr>
               ))
