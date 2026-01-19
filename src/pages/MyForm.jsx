@@ -1,9 +1,9 @@
-import { FaBriefcase, FaUserGraduate } from "react-icons/fa";
 import { useState } from "react";
 import PorpolioForm from "../components/forms/PorpolioForm";
 import PlacementForm from "../components/forms/PlacementForm";
 import PlacementTable from "../components/forms/PlacementTable";
 import PortfolioTable from "../components/forms/PortfolioTable";
+import ReviewForm from "../components/forms/ReviewForm";
 
 export default function MyForm() {
   const [activeMenu, setActiveMenu] = useState("portfolio");
@@ -56,6 +56,17 @@ export default function MyForm() {
               >
                 Portfolio Table
               </li>
+
+
+              <li
+                className={`nav-link text-white ${
+                  activeMenu === "PortfolioTable" ? "fw-bold" : ""
+                }`}
+                style={{ cursor: "pointer" }}
+                onClick={() => setActiveMenu("ReviewForm")}
+              >
+                Review Table
+              </li>
             </ul>
           </div>
 
@@ -82,6 +93,12 @@ export default function MyForm() {
             {activeMenu === "PortfolioTable" && (
               <div>
                 <PortfolioTable />
+              </div>
+            )}
+
+            {activeMenu === "ReviewForm" && (
+              <div>
+                <ReviewForm />
               </div>
             )}
           </div>

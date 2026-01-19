@@ -12,7 +12,7 @@ import FrontendCourse from "./pages/FrontendCourse";
 import TestingCourse from "./pages/TestingCourse";
 import EditPortfolio from "./components/forms/EditPortfolio";
 import ScrollToTop from "./components/ScrollToTop";
-import ThoughtForm from "./components/ThoughtForm";
+import Review from "./components/Review";
 
 // Only these two are lazy loaded
 const Portfolio = lazy(() => import("./pages/Portfolio"));
@@ -38,7 +38,7 @@ function App() {
             <Route path="/frontend_course" element={<FrontendCourse />} />
             <Route path="/software_testing" element={<TestingCourse />} />
             <Route path="/save" element={<MyForm />} />
-<Route path="/thought" element={<ThoughtForm/>}/>
+            <Route path="/review" element={<Review/>}/>
             <Route path="/edit-portfolio/:id" element={<EditPortfolio />} />
           </Route>
         </Routes>

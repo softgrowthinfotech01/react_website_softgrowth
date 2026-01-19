@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ThoughtForm = () => {
+const Review = () => {
   const [formData, setFormData] = useState({
     name: "",
     role: "",
@@ -123,7 +123,4 @@ const ThoughtForm = () => {
   );
 };
 
-
-
-
-export default ThoughtForm;
+export default Review;
