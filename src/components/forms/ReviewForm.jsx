@@ -1,6 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const ReviewForm = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("https://softgrowthinfotech.com/backend/api/thoughts/get.php")
+      .then((res) => res.json())
+      .then((result) => {
+        // if API returns { status: true, data: [] }
+        if (result.status) {
+          setData(result.data);
+        }
+      })
+      .catch((err) => console.error(err));
+  }, []);
+
   return (
     <div className="container-fluid p-3">
       <div className="table-responsive">
@@ -17,43 +31,31 @@ const ReviewForm = () => {
           </thead>
 
           <tbody>
-            <tr>
-              <td>
-                <img
-                  src="https://via.placeholder.com/60"
-                  alt="Profile"
-                  className="rounded-circle"
-                  width="60"
-                  height="60"
-                />
-              </td>
-              <td>Akshay Patil</td>
-              <td>Frontend Developer</td>
-              <td>Tech Solutions Pvt Ltd</td>
-              <td>
-                Great experience working with the team. Learned a lot about
-                React, performance optimization, and UI best practices.
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <img
-                  src="https://via.placeholder.com/60"
-                  alt="Profile"
-                  className="rounded-circle"
-                  width="60"
-                  height="60"
-                />
-              </td>
-              <td>Rohit Sharma</td>
-              <td>UI Engineer</td>
-              <td>Innovate Labs</td>
-              <td>
-                Excellent work culture and strong focus on clean, scalable
-                frontend architecture.
-              </td>
-            </tr>
+            {data.length > 0 ? (
+              data.map((item, index) => (
+                <tr key={index}>
+                  <td>
+                    <img
+                      src={item.image || "https://via.placeholder.com/60"}
+                      alt="Profile"
+                      className="rounded-circle"
+                      width="60"
+                      height="60"
+                    />
+                  </td>
+                  <td>{item.name || item.title}</td>
+                  <td>{item.position || "Frontend Developer"}</td>
+                  <td>{item.company || "Tech Solutions Pvt Ltd"}</td>
+                  <td>{item.description}</td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="5" className="text-center">
+                  No reviews found
+                </td>
+              </tr>
+            )}
           </tbody>
         </table>
       </div>

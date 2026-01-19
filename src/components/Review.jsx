@@ -3,11 +3,13 @@ import { useState } from "react";
 const Review = () => {
   const [formData, setFormData] = useState({
     name: "",
-    role: "",
+    current_position: "",
     title: "",
     review: "",
     image: null,
   });
+
+  const [message, setMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
@@ -17,9 +19,44 @@ const Review = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Thank you for your review!");
+
+    const payload = new FormData();
+    payload.append("name", formData.name);
+    payload.append("current_position", formData.current_position);
+    payload.append("title", formData.title);
+    payload.append("review", formData.review);
+    payload.append("image", formData.image);
+
+    try {
+      const res = await fetch(
+        "https://softgrowthinfotech.com/backend/api/thoughts/thoughts.php",
+        {
+          method: "POST",
+          body: payload,
+        }
+      );
+
+      const data = await res.json();
+
+      if (data.status) {
+        setMessage("Data has been saved successfully!");
+        setFormData({
+          name: "",
+          current_position: "",
+          title: "",
+          review: "",
+          image: null,
+        });
+        e.target.reset();
+      } else {
+        setMessage("Error while saving data!");
+      }
+    } catch (error) {
+      console.error(error);
+      setMessage("Server error!");
+    }
   };
 
   return (
@@ -35,6 +72,8 @@ const Review = () => {
                   Share your experience as a student or client
                 </p>
               </div>
+
+              {message && <p className="text-success">{message}</p>}
 
               <form onSubmit={handleSubmit}>
                 {/* Name */}
