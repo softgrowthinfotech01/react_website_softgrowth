@@ -33,7 +33,7 @@ const Review = () => {
 
     try {
       const res = await fetch(
-        "http://softgrowthinfotech.com/backend/api/thoughts/thoughts.php",
+        "https://softgrowthinfotech.com/backend/api/thoughts/thoughts.php",
         {
           method: "POST",
           body: payload,

@@ -5,7 +5,7 @@ const ReviewForm = () => {
 
   useEffect(() => {
     fetch(
-      "http://softgrowthinfotech.com/backend/api/thoughts/get.php"
+      "https://softgrowthinfotech.com/backend/api/thoughts/get.php"
     )
       .then((res) => res.json())
       .then((result) => {
@@ -41,7 +41,7 @@ const ReviewForm = () => {
                     <img
                       src={
                         item.image
-                          ? `http://softgrowthinfotech.com/backend/api/thoughts/uploads/${item.image}`
+                          ? `https://softgrowthinfotech.com/backend/api/thoughts/uploads/${item.image}`
                           : "https://via.placeholder.com/60"
                       }
                       alt="Profile"
