@@ -2,7 +2,7 @@
   "name": "softgrowth",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://neonelite.in/react_website_softgrowth/",
+  "homepage": "/react_website_softgrowth/",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
