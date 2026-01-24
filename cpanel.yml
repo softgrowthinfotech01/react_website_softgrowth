@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home2/anushkaf/neonelite.in/react_website_softgrowth
+    - /bin/cp * $DEPLOYPATH
+    
