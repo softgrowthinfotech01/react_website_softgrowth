@@ -4,15 +4,15 @@ import FrequentlySection from "../components/home/FrequentlySection";
 // import images
 import landingImage from "../assets/landing-image1.webp";
 import servicesImage from "../assets/services-image.webp";
-import featuredImage from "../assets/featured-1.webp";
+import featuredImage from "../assets/feture1.jpg";
 
 const ClientSections = lazy(() => import("../components/home/ClientSections"));
-const EnvirnmentSections = lazy(() =>
-  import("../components/home/EnvirnmentSections")
+const EnvirnmentSections = lazy(
+  () => import("../components/home/EnvirnmentSections"),
 );
 
-const PortolioSections = lazy(() =>
-  import("../components/home/PortolioSections")
+const PortolioSections = lazy(
+  () => import("../components/home/PortolioSections"),
 );
 
 export default function Home() {
@@ -88,7 +88,8 @@ export default function Home() {
             <div className="section-title" data-aos="fade-up">
               <h2 className="orangeborder">Services</h2>
               <p>
-                We always try to provide best services. Get more insight to it.{" "}
+                We always try to provide best services. Get more insight to
+                it.{" "}
               </p>
             </div>
             <div className="row">
@@ -235,11 +236,11 @@ export default function Home() {
                     style={{ height: 100 }}
                     id="tab-1"
                   >
-                    <figure>
+                    <figure className="text-center align-center">
                       <img
                         src={featuredImage}
-                        alt=""
-                        className="w-50"
+                        alt="Image Choose"
+                        className="w-75"
                       />
                     </figure>
                   </div>

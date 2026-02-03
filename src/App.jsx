@@ -20,8 +20,9 @@ const Placements = lazy(() => import("./pages/placements"));
 
 function App() {
   return (
-    <BrowserRouter basename="/react_website_softgrowth/">
-       <ScrollToTop />
+    //  basename="/react_website_softgrowth/"
+    <BrowserRouter>
+      <ScrollToTop />
       <Suspense fallback={<div className="text-center p-5">Loading...</div>}>
         <Routes>
           <Route element={<MainLayout />}>
@@ -38,7 +39,7 @@ function App() {
             <Route path="/frontend_course" element={<FrontendCourse />} />
             <Route path="/software_testing" element={<TestingCourse />} />
             <Route path="/save" element={<MyForm />} />
-            <Route path="/review" element={<Review/>}/>
+            <Route path="/review" element={<Review />} />
             <Route path="/edit-portfolio/:id" element={<EditPortfolio />} />
           </Route>
         </Routes>
@@ -48,4 +49,3 @@ function App() {
 }
 
 export default App;
-
