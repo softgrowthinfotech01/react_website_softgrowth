@@ -7,40 +7,48 @@ import About from "./pages/About";
 import Career from "./pages/Career";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
-import MyForm from "./pages/MyForm";
 import FrontendCourse from "./pages/FrontendCourse";
 import TestingCourse from "./pages/TestingCourse";
-import EditPortfolio from "./components/forms/EditPortfolio";
 import ScrollToTop from "./components/ScrollToTop";
 import Review from "./components/Review";
+import Login from "./login/Login";
+import ProtectedRoute from "./login/ProtectedRoute";
+import MyForm from "./pages/MyForm";
+import NotFound from "./pages/NotFound";
 
-// Only these two are lazy loaded
 const Portfolio = lazy(() => import("./pages/Portfolio"));
 const Placements = lazy(() => import("./pages/placements"));
 
 function App() {
   return (
-    //  basename="/react_website_softgrowth/"
     <BrowserRouter>
       <ScrollToTop />
       <Suspense fallback={<div className="text-center p-5">Loading...</div>}>
         <Routes>
           <Route element={<MainLayout />}>
+            {/* PUBLIC ROUTES */}
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/career" element={<Career />} />
             <Route path="/services" element={<Services />} />
-
-            {/* Optimized pages */}
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/placements" element={<Placements />} />
-
             <Route path="/contact" element={<Contact />} />
             <Route path="/frontend_course" element={<FrontendCourse />} />
             <Route path="/software_testing" element={<TestingCourse />} />
-            <Route path="/save" element={<MyForm />} />
             <Route path="/review" element={<Review />} />
-            <Route path="/edit-portfolio/:id" element={<EditPortfolio />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="*" element={<NotFound />} />
+
+            {/* 🔐 PROTECTED SAVE COMPONENT */}
+            <Route
+              path="/save"
+              element={
+                <ProtectedRoute>
+                  <MyForm />
+                </ProtectedRoute>
+              }
+            />
           </Route>
         </Routes>
       </Suspense>
