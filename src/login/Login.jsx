@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
+const SESSION_TIMEOUT = 15 * 60 * 1000; // 15 minutes
+
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -12,8 +14,12 @@ const Login = () => {
     e.preventDefault();
 
     if (username === "admin" && password === "admin123") {
-      localStorage.setItem("isLoggedIn", "true");
-      navigate("/save"); // ✅ redirect to Save component
+      const expiryTime = Date.now() + SESSION_TIMEOUT;
+
+      sessionStorage.setItem("isLoggedIn", "true");
+      sessionStorage.setItem("expiryTime", expiryTime);
+
+      navigate("/save"); // protected page
     } else {
       setError("Invalid username or password");
     }
