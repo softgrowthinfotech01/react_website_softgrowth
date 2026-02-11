@@ -66,6 +66,27 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li>
+                  <Link to="/php_course" className="text-decoration-none">
+                    Php Course
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/web_developement_course"
+                    className="text-decoration-none"
+                  >
+                    Web Development
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/web_design_course"
+                    className="text-decoration-none"
+                  >
+                    Web Design
+                  </Link>
+                </li>
+                <li>
                   <Link to="/placements" className="text-decoration-none">
                     Placements
                   </Link>

@@ -5,6 +5,7 @@ import PlacementForm from "../components/forms/PlacementForm";
 import PlacementTable from "../components/forms/PlacementTable";
 import PortfolioTable from "../components/forms/PortfolioTable";
 import ReviewForm from "../components/forms/ReviewForm";
+import PayslipGenerator from "../components/forms/PayslipGenerator";
 
 export default function MyForm() {
   const [activeMenu, setActiveMenu] = useState("portfolio");
@@ -68,8 +69,17 @@ export default function MyForm() {
               Review Table
             </li>
 
+            <li
+              className={`nav-link text-white ${
+                activeMenu === "ReviewForm" ? "fw-bold" : ""
+              }`}
+              onClick={() => setActiveMenu("salarySlip")}
+            >
+              Generate Payslip
+            </li>
+
             <li className="nav-link text-danger" onClick={handleLogout}>
-              <button className=""> Logout</button>
+              <button> Logout</button>
             </li>
           </ul>
         </div>
@@ -81,6 +91,7 @@ export default function MyForm() {
           {activeMenu === "placementstable" && <PlacementTable />}
           {activeMenu === "PortfolioTable" && <PortfolioTable />}
           {activeMenu === "ReviewForm" && <ReviewForm />}
+          {activeMenu === "salarySlip" && <PayslipGenerator />}
         </div>
       </div>
     </div>
