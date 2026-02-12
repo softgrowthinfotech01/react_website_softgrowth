@@ -1,6 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Enquiry_form = () => {
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+
+    await fetch("https://formsubmit.co/softgrowthinfotech@gmail.com", {
+      method: "POST",
+      body: formData,
+    });
+
+    setSubmitted(true);
+    e.target.reset();
+  };
+
   return (
     <div className="col-lg-5" id="enquiry">
       <div className="card border-0 shadow-lg rounded-4 text-dark">
@@ -14,13 +30,17 @@ const Enquiry_form = () => {
             and nearest batch.
           </p>
 
-          <form>
+          <form onSubmit={handleSubmit}>
+            <input type="hidden" name="_captcha" value="false" />
+
             <div className="mb-3">
               <label className="form-label small fw-semibold">Full Name</label>
               <input
                 type="text"
+                name="full_name"
                 className="form-control bg-light"
                 placeholder="Enter your full name"
+                required
               />
             </div>
 
@@ -30,8 +50,10 @@ const Enquiry_form = () => {
               </label>
               <input
                 type="tel"
+                name="mobile"
                 className="form-control bg-light"
                 placeholder="Enter your mobile number"
+                required
               />
             </div>
 
@@ -39,8 +61,10 @@ const Enquiry_form = () => {
               <label className="form-label small fw-semibold">Email ID</label>
               <input
                 type="email"
+                name="email"
                 className="form-control bg-light"
                 placeholder="Enter your email"
+                required
               />
             </div>
 
@@ -48,8 +72,12 @@ const Enquiry_form = () => {
               <label className="form-label small fw-semibold">
                 Preferred Mode
               </label>
-              <select className="form-select bg-light">
-                <option>Select mode</option>
+              <select
+                name="preferred_mode"
+                className="form-select bg-light"
+                required
+              >
+                <option value="">Select mode</option>
                 <option>Classroom</option>
                 <option>Flexible / Mixed</option>
               </select>
@@ -57,8 +85,12 @@ const Enquiry_form = () => {
 
             <div className="mb-3">
               <label className="form-label small fw-semibold">Background</label>
-              <select className="form-select bg-light">
-                <option>Select your background</option>
+              <select
+                name="background"
+                className="form-select bg-light"
+                required
+              >
+                <option value="">Select your background</option>
                 <option>BE / B.Tech</option>
                 <option>BSc / BCA</option>
                 <option>MSc / MCA</option>
@@ -72,6 +104,7 @@ const Enquiry_form = () => {
                 Message (Optional)
               </label>
               <textarea
+                name="message"
                 className="form-control bg-light"
                 rows="2"
                 placeholder="Any specific query?"
@@ -79,10 +112,13 @@ const Enquiry_form = () => {
             </div>
 
             <button
-              type="button"
-              className="btn btn-warning w-100 fw-bold py-2"
+              type="submit"
+              className={`btn w-100 fw-bold py-2 ${
+                submitted ? "btn-success" : "btn-warning"
+              }`}
+              disabled={submitted}
             >
-              Get Call Back
+              {submitted ? "Form Submitted ✅" : "Get Call Back"}
             </button>
 
             <p
