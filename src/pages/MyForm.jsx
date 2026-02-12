@@ -5,7 +5,6 @@ import PlacementForm from "../components/forms/PlacementForm";
 import PlacementTable from "../components/forms/PlacementTable";
 import PortfolioTable from "../components/forms/PortfolioTable";
 import ReviewForm from "../components/forms/ReviewForm";
-import PayslipGenerator from "../components/forms/PayslipGenerator";
 
 export default function MyForm() {
   const [activeMenu, setActiveMenu] = useState("portfolio");

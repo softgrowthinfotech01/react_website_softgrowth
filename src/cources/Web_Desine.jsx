@@ -1,11 +1,15 @@
 import React from "react";
 import Enquiry_form from "./Enquiry_form";
+import FrontendFAQ from "./FrontendFAQ";
 
 const Web_Desine = () => {
   return (
     <div>
       {/* HERO SECTION */}
-      <section className="text-white py-5 position-relative overflow-hidden bg-dark">
+      <section
+        className="text-white py-5 position-relative overflow-hidden"
+        id="curriculum"
+      >
         <div className="container py-lg-4">
           <div className="row g-5 align-items-start">
             {/* LEFT CONTENT */}
@@ -243,7 +247,7 @@ const Web_Desine = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-5 bg-dark text-white text-center">
+      <section className="py-5 text-white text-center" id="curriculum">
         <div className="container">
           <h3 className="fw-bold">Become a Professional Web Designer</h3>
           <p className="mt-2 text-white-50">
@@ -257,6 +261,7 @@ const Web_Desine = () => {
           </a>
         </div>
       </section>
+      <FrontendFAQ />
     </div>
   );
 };

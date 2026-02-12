@@ -1,11 +1,14 @@
-import React from "react";
 import Enquiry_form from "./Enquiry_form";
+import FrontendFAQ from "./FrontendFAQ";
 
 const Php_Course = () => {
   return (
     <div>
       {/* HERO SECTION */}
-      <section className="text-white py-5 position-relative overflow-hidden bg-dark">
+      <section
+        className="text-white py-5 position-relative overflow-hidden"
+        id="curriculum"
+      >
         <div className="container py-lg-4">
           <div className="row g-5 align-items-start">
             {/* LEFT CONTENT */}
@@ -95,8 +98,158 @@ const Php_Course = () => {
           </p>
         </div>
       </section>
+      <section className="py-5 bg-primary bg-opacity-10" id="modules">
+        <div className="container py-4">
+          <h2 className="fw-bold text-center mb-5">
+            Laravel PHP – Course Modules
+          </h2>
 
-      {/* KEEP REMAINING CODE SAME */}
+          <div className="row g-4">
+            {[
+              {
+                title: "PHP Fundamentals",
+                items: [
+                  "Syntax & Variables",
+                  "Forms Handling",
+                  "Sessions & Cookies",
+                  "File Handling",
+                ],
+              },
+              {
+                title: "MySQL & Database",
+                items: [
+                  "Database Creation",
+                  "SQL Queries",
+                  "Joins",
+                  "Optimization",
+                ],
+              },
+              {
+                title: "Laravel Basics",
+                items: [
+                  "Installation",
+                  "MVC Structure",
+                  "Routing",
+                  "Controllers",
+                ],
+              },
+              {
+                title: "Blade & Forms",
+                items: ["Layouts", "Components", "Validation", "Form Handling"],
+              },
+              {
+                title: "Eloquent ORM",
+                items: ["Migrations", "Relationships", "CRUD", "Query Builder"],
+              },
+              {
+                title: "Authentication & Security",
+                items: [
+                  "Login Systems",
+                  "Middleware",
+                  "Authorization",
+                  "Security Best Practices",
+                ],
+              },
+              {
+                title: "API Development",
+                items: ["REST APIs", "JSON", "AJAX Integration", "Testing"],
+              },
+              {
+                title: "Deployment",
+                items: [
+                  "Hosting",
+                  "Environment Setup",
+                  "Optimization",
+                  "Project Launch",
+                ],
+              },
+            ].map((module, index) => (
+              <div className="col-md-6 col-lg-4" key={index}>
+                <div className="card h-100 border-0 shadow-sm rounded-4">
+                  <div className="card-body p-4">
+                    <h6 className="fw-bold mb-3">{module.title}</h6>
+                    <ul className="small text-muted ps-3 mb-0">
+                      {module.items.map((item, i) => (
+                        <li key={i} className="mb-1">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURES */}
+      <section className="py-5 bg-white">
+        <div className="container py-4">
+          <h2 className="fw-bold text-center mb-5 text-dark">
+            Why Choose This Course?
+          </h2>
+
+          <div className="row g-4">
+            {[
+              {
+                icon: "fa-layer-group",
+                title: "Foundation to Advanced",
+                text: "Complete PHP to Laravel learning path.",
+              },
+              {
+                icon: "fa-code",
+                title: "Real Projects",
+                text: "Build dynamic backend applications.",
+              },
+              {
+                icon: "fa-certificate",
+                title: "Certification",
+                text: "Industry-recognized certificate.",
+              },
+              {
+                icon: "fa-user-tie",
+                title: "Career Support",
+                text: "Interview preparation & guidance.",
+              },
+            ].map((item, idx) => (
+              <div className="col-md-6 col-lg-3" key={idx}>
+                <div className="card h-100 border-0 shadow-sm rounded-4 text-center">
+                  <div className="card-body p-4">
+                    <div
+                      className="d-inline-flex align-items-center justify-content-center bg-danger bg-opacity-10 rounded-circle mb-3"
+                      style={{ width: "50px", height: "50px" }}
+                    >
+                      <i className={`fa-solid ${item.icon} text-danger`}></i>
+                    </div>
+                    <h6 className="fw-bold">{item.title}</h6>
+                    <p className="small text-muted mb-0">{item.text}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-5  text-white text-center" id="curriculum">
+        <div className="container">
+          <h3 className="fw-bold">
+            Become a Professional Laravel Backend Developer
+          </h3>
+          <p className="mt-2 text-white-50">
+            Enroll today and start building scalable web applications.
+          </p>
+          <a
+            href="#modules"
+            className="btn btn-warning btn-lg mt-3 fw-semibold"
+          >
+            Apply Now
+          </a>
+        </div>
+      </section>
+      <FrontendFAQ />
     </div>
   );
 };
