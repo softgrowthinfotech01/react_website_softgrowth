@@ -49,7 +49,9 @@ const Web_Desine = () => {
                   <i className="fa-solid fa-certificate me-2"></i> Certification
                 </div>
               </div>
-
+              <div className="d-flex align-items-center gap-2 mb-4 text-white-50">
+                <i className="fa-solid fa-location-dot"></i> Chandrapur
+              </div>
               {/* STATS STRIP */}
               <div className="row g-3 bg-white bg-opacity-10 rounded-4 p-3 mx-0 border border-light border-opacity-10">
                 <div className="col-6 col-md-3">

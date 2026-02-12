@@ -48,6 +48,10 @@ const Php_Course = () => {
                 </div>
               </div>
 
+              <div className="d-flex align-items-center gap-2 mb-4 text-white-50">
+                <i className="fa-solid fa-location-dot"></i> Chandrapur
+              </div>
+
               <div className="row g-3 bg-white bg-opacity-10 rounded-4 p-3 mx-0 border border-light border-opacity-10">
                 <div className="col-6 col-md-3">
                   <div className="fw-bold fs-5">150+</div>
