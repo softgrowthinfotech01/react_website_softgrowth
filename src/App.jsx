@@ -25,7 +25,7 @@ const Placements = lazy(() => import("./pages/placements"));
 function App() {
   return (
     //  basename="/react_website_softgrowth/"
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <ScrollToTop />
       <Suspense fallback={<div className="text-center p-5">Loading...</div>}>
         <Routes>
