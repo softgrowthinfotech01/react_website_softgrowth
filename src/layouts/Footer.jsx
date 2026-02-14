@@ -32,7 +32,11 @@ export default function Navbar() {
           <div className="row justify-content-space-between">
             <div className="col-md-4">
               <h2 className="text-uppercase">About Softgrowth</h2>
-              <img src={line} className="img-responsive lineSeparator py-4" alt="separator" />
+              <img
+                src={line}
+                className="img-responsive lineSeparator py-4"
+                alt="separator"
+              />
               <p className="my-1 h6">
                 As a top best web design company in Chandrapur we provide all
                 facilities related to the digitalization of your business.
@@ -41,7 +45,11 @@ export default function Navbar() {
 
             <div className="col-md-4">
               <h2 className="text-uppercase">Newsletter</h2>
-              <img src={line} className="img-responsive lineSeparator py-4" alt="separator" />
+              <img
+                src={line}
+                className="img-responsive lineSeparator py-4"
+                alt="separator"
+              />
               <div className="form-group">
                 <div className="input-group">
                   <div className="input-group-addon">
@@ -58,14 +66,18 @@ export default function Navbar() {
 
             <div className="col-md-4">
               <h2 className="text-uppercase">Contact</h2>
-              <img src={line} className="img-responsive lineSeparator py-4" alt="separator" />
+              <img
+                src={line}
+                className="img-responsive lineSeparator py-4"
+                alt="separator"
+              />
               <div className="row h6">
                 <div className="col-md-6">
                   <ul className="infoContact list-unstyled text-light">
                     <i className="bx bx-current-location" />
                     <li>
                       Global Tower, Kosara Road, Datala, Kosara, Chandrapur.
-                      Maharashtra - 442402
+                      Maharashtra - 442406
                     </li>
                   </ul>
                   <ul className="infoContact list-unstyled">
@@ -78,7 +90,8 @@ export default function Navbar() {
                 <div className="col-md-6">
                   <ul className="infoContact list-unstyled text-light">
                     <li>
-                      <i className="bx bx-envelope" /> info@softgrowthinfotech.com
+                      <i className="bx bx-envelope" />{" "}
+                      info@softgrowthinfotech.com
                     </li>
                     <li>softgrowthinfotech@gmail.com</li>
                   </ul>
@@ -99,22 +112,38 @@ export default function Navbar() {
             <a href="https://x.com/SoftgrowthIndia" className="twitter">
               <i className="bx bxl-twitter" />
             </a>
-            <a href="https://www.facebook.com/softgrowthinfotech/" className="facebook">
+            <a
+              href="https://www.facebook.com/softgrowthinfotech/"
+              className="facebook"
+            >
               <i className="bx bxl-facebook" />
             </a>
-            <a href="https://www.instagram.com/softgrowth_infotech/" className="instagram">
+            <a
+              href="https://www.instagram.com/softgrowth_infotech/"
+              className="instagram"
+            >
               <i className="bx bxl-instagram" />
             </a>
-            <a href="https://www.youtube.com/channel/UCqCPPXJhtHVxdVo6KLgf_Pw/featured" className="google-plus">
+            <a
+              href="https://www.youtube.com/channel/UCqCPPXJhtHVxdVo6KLgf_Pw/featured"
+              className="google-plus"
+            >
               <i className="bx bxl-youtube" />
             </a>
-            <a href="https://in.linkedin.com/company/softgrowth-infotech" className="linkedin">
+            <a
+              href="https://in.linkedin.com/company/softgrowth-infotech"
+              className="linkedin"
+            >
               <i className="bx bxl-linkedin" />
             </a>
           </div>
 
           <div className="copyright">
-            © Copyright <strong><span>Softgrowth Infotech</span></strong>. All Rights Reserved
+            © Copyright{" "}
+            <strong>
+              <span>Softgrowth Infotech</span>
+            </strong>
+            . All Rights Reserved
           </div>
 
           <div className="credits">

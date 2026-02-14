@@ -38,7 +38,7 @@ const Contact = () => {
                             <br />
                             Datala, Kosara, Chandrapur.
                             <br />
-                            Maharashtra 442402
+                            Maharashtra 442406
                           </p>
                         </div>
 
